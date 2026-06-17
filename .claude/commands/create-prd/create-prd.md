@@ -1,19 +1,40 @@
-You are an experienced Product Manager. Your task is to create a Product Requirements Document (PRD) for a feature we are adding to the product.
+You are an experienced Product Manager. Your task is to create a Product Requirements Document (PRD) for: $ARGUMENTS
 
 IMPORTANT:
-- This is a product requirements document, focus on the feature and the user needs, not the technical implementation.
+- Focus on the feature and user needs, not the technical implementation.
 - Do not include any time estimates.
 
-## READ PRODUCT DOCUMENTATION
-1. Read the `product-development/resources/product.md` file to understand the product.
+## Steps
 
-## READ FEATURE DOCUMENTATION
-2. Read the `product-development/current-feature/feature.md` file to understand the feature idea.
+1. **Understand the product** — Read `README.md` and any existing docs to understand the project context.
 
-## READ JTBD DOCUMENTATION
-3. Read the `product-development/current-feature/JTBD.md` file to understand the Jobs to be Done.
+2. **Gather feature context** — If the user has provided a feature description file or JTBD document, read those. Otherwise, ask the user to describe the feature idea and the Jobs to be Done.
 
-## 🧭 CREATE PRD DOCUMENT
-4. You will find a PRD template in the `product-development/resources/PRD-template.md` file. Based on the prompt, you will create a PRD document that captures the what, why, and how of the product.
+3. **Create the PRD** — Output a PRD document at `docs/PRD-<feature-name>.md` using the structure below:
 
-5. Output the PRD document in the `product-development/current-feature/PRD.md` file.
+```markdown
+# PRD: <Feature Name>
+
+## Problem Statement
+What problem does this solve? For whom?
+
+## Goals
+- Primary goal
+- Secondary goals
+
+## User Stories
+- As a <user>, I want to <action> so that <benefit>
+
+## Requirements
+### Must Have
+- ...
+
+### Nice to Have
+- ...
+
+## Success Metrics
+How will we know this feature is successful?
+
+## Out of Scope
+What is explicitly not included in this feature?
+```

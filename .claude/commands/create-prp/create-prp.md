@@ -1,76 +1,57 @@
-YOU MUST READ THESE FILES AND FOLLOW THE INSTRUCTIONS IN THEM.
-Start by reading the concept_library/cc_PRP_flow/README.md to understand what a PRP
-Then read concept_library/cc_PRP_flow/PRPs/base_template_v1 to understand the structure of a PRP.
-
-Think hard about the concept
-
 Help the user create a comprehensive Product Requirement Prompt (PRP) for: $ARGUMENTS
 
-## Instructions for PRP Creation
-
-Research and develop a complete PRP based on the feature/product description above. Follow these guidelines:
+A PRP is PRD + curated codebase intelligence + agent/runbook — the minimum viable packet an AI needs to ship production-ready code on the first pass.
 
 ## Research Process
 
-Begin with thorough research to gather all necessary context:
+1. **Codebase Exploration**
+   - Explore the current project structure with `git ls-files`
+   - Identify relevant files and patterns that should be followed
+   - Ask the user about specific areas to focus on
 
-1. **Documentation Review**
-
-   - Check for relevant documentation in the `ai_docs/` directory
-   - Identify any documentation gaps that need to be addressed
+2. **Documentation Review**
+   - Check for any existing docs (README, docs/, etc.)
+   - Identify documentation gaps
    - Ask the user if additional documentation should be referenced
 
-2. **WEB RESEARCH**
+3. **Web Research**
+   - Research the feature/product concept
+   - Look into relevant library documentation and example implementations
 
-   - Use web search to gather additional context
-   - Research the concept of the feature/product
-   - Look into library documentation
-   - Look into example implementations on StackOverflow
-   - Look into example implementations on GitHub
-   - etc...
-   - Ask the user if additional web search should be referenced
-
-3. **Template Analysis**
-
-   - Use `concept_library/cc_PRP_flow/PRPs/base_template_v1` as the structural reference
-   - Ensure understanding of the template requirements before proceeding
-   - Review past templates in the PRPs/ directory for inspiration if there are any
-
-4. **Codebase Exploration**
-
-   - Identify relevant files and directories that provide implementation context
-   - Ask the user about specific areas of the codebase to focus on
-   - Look for patterns that should be followed in the implementation
-
-5. **Implementation Requirements**
+4. **Implementation Requirements**
    - Confirm implementation details with the user
-   - Ask about specific patterns or existing features to mirror
-   - Inquire about external dependencies or libraries to consider
+   - Ask about external dependencies or libraries to consider
 
-## PRP Development
+## PRP Structure
 
-Create a PRP following the template in `concept_library/cc_PRP_flow/PRPs/base_template_v1`, ensuring it includes the same structure as the template.
+Create a PRP document (save to `PRPs/<feature-name>.md`) with the following sections:
 
-## Context Prioritization
+```markdown
+# PRP: <Feature Name>
 
-A successful PRP must include comprehensive context through specific references to:
+## Goal
+One-sentence description of what this implements.
 
-- Files in the codebase
-- Web search results and URL's
-- Documentation
-- External resources
-- Example implementations
-- Validation criteria
+## Context
+- Relevant files and their purpose
+- Patterns to follow
+- External dependencies
+
+## Implementation Blueprint
+Step-by-step plan for implementation.
+
+## Validation Criteria
+- How to verify the implementation is correct
+- Tests to write
+- Edge cases to handle
+```
 
 ## User Interaction
 
-After completing initial research, present findings to the user and confirm:
-
+After completing initial research, present findings and confirm:
 - The scope of the PRP
 - Patterns to follow
 - Implementation approach
 - Validation criteria
 
-If the user answers with continue, you are on the right path, continue with the PRP creation without user input.
-
-Remember: A PRP is PRD + curated codebase intelligence + agent/runbook—the minimum viable packet an AI needs to ship production-ready code on the first pass.
+If the user says "continue", proceed with PRP creation without further input.

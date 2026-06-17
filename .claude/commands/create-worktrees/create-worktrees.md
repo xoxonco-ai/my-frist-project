@@ -60,18 +60,17 @@ You can add this to remove stale worktrees for branches that no longer exist:
 # Get current branches
 current_branches=$(git branch -a | grep -v HEAD | grep -v main | sed 's/^[ *]*//' | sed 's|remotes/origin/||' | sort | uniq)
 
-# Get existing worktrees (excluding main worktree)
-worktree_paths=$(git worktree list | tail -n +2 | awk '{print $1}')
+# Read worktree path and branch directly from git worktree list
+git worktree list | tail -n +2 | while read -r path commit branch; do
+  # Extract branch name from brackets, e.g., [feature/foo] -> feature/foo
+  branch_name="${branch#[}"
+  branch_name="${branch_name%]}"
 
-for path in $worktree_paths; do
-  # Extract branch name from path
-  branch_name=$(basename "$path")
-  
-  # Skip special cases
-  if [[ "$branch_name" == "main" ]]; then
+  # Skip if no branch is associated or if it's main
+  if [[ -z "$branch_name" || "$branch_name" == "main" ]]; then
     continue
   fi
-  
+
   # Check if branch still exists
   if ! echo "$current_branches" | grep -q "^$branch_name$"; then
     echo "Removing stale worktree for deleted branch: $branch_name"

@@ -8,12 +8,12 @@ description: Manage project todos in todos.md file
 Manage todos in a `todos.md` file at the root of your current project directory.
 
 ## Usage Examples:
-- `/user:todo add "Fix navigation bug"`
-- `/user:todo add "Fix navigation bug" [date/time/"tomorrow"/"next week"]` an optional 2nd parameter to set a due date
-- `/user:todo complete 1` 
-- `/user:todo remove 2`
-- `/user:todo list`
-- `/user:todo undo 1`
+- `/todo add "Fix navigation bug"`
+- `/todo add "Fix navigation bug" [date/time/"tomorrow"/"next week"]` an optional 2nd parameter to set a due date
+- `/todo complete 1` 
+- `/todo remove 2`
+- `/todo list`
+- `/todo undo 1`
 
 ## Instructions:
 
