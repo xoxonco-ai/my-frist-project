@@ -18,11 +18,11 @@ const README_FILE = "README.md";
  * Parse YAML frontmatter from a SKILL.md file
  */
 function parseFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!match) return {};
 
   const frontmatter = {};
-  const lines = match[1].split("\n");
+  const lines = match[1].split(/\r?\n/);
 
   for (const line of lines) {
     const colonIndex = line.indexOf(":");
@@ -90,7 +90,7 @@ function truncateDescription(description, maxLength = 120) {
   const truncated = description.slice(0, maxLength);
   const lastSpace = truncated.lastIndexOf(" ");
 
-  return truncated.slice(0, lastSpace) + "...";
+  return (lastSpace === -1 ? truncated : truncated.slice(0, lastSpace)) + "...";
 }
 
 /**
@@ -114,7 +114,7 @@ function updateReadme(skills) {
   const content = fs.readFileSync(README_FILE, "utf8");
 
   // Match content between skill list markers
-  const tableRegex = /(<!-- SKILLS:START -->\n)[\s\S]*?(\n<!-- SKILLS:END -->)/;
+  const tableRegex = /(<!-- SKILLS:START -->\r?\n)[\s\S]*?(\r?\n<!-- SKILLS:END -->)/;
   const newTable = generateSkillsTable(skills);
 
   if (!tableRegex.test(content)) {
