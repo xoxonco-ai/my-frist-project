@@ -15,7 +15,16 @@ import tempfile
 
 CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 OUT = os.path.join(os.path.dirname(__file__), "out")
-CJK = "'WenQuanYi Zen Hei','Noto Serif TC','PingFang TC',serif"
+
+# 黑金用明體（在你 Mac 上是思源宋體/PingFang），溫柔用黑體；預覽環境退回 WenQuanYi。
+FONT_SERIF = "'Noto Serif TC','Noto Serif CJK TC','Songti TC','PingFang TC','WenQuanYi Zen Hei',serif"
+FONT_SANS = "'PingFang TC','Noto Sans TC','WenQuanYi Zen Hei',sans-serif"
+
+# 房間 → 主題路由（提案，可改；也可在 room_theme_map.csv 覆寫）
+ROOM_THEME = {
+    "木雕哲學": "soft", "回家": "soft",
+    "見幻筆記": "blackgold", "浮生解碼": "blackgold", "登出指南": "blackgold",
+}
 
 # --- D01 內容（洞不是缺陷，而是入口）---
 CARDS = [
@@ -44,7 +53,7 @@ THEMES = {
         "frame": "rgba(201,162,39,.28)", "wm": "rgba(201,162,39,.13)",
         "kicker": "#c9a227", "box_bg": "rgba(0,0,0,.34)", "box_bd": "rgba(201,162,39,.38)",
         "ink": "#f4efe6", "gold": "#d8b24a", "sub": "#e7dcc4",
-        "foot": "#c9a227", "page": "rgba(201,162,39,.6)", "leaf": "",
+        "foot": "#c9a227", "page": "rgba(201,162,39,.6)", "leaf": "", "font": FONT_SERIF,
     },
     "soft": {
         "page_bg": "#faf7f2",
@@ -54,7 +63,7 @@ THEMES = {
         "frame": "#e2d9c8", "wm": "rgba(92,125,92,.10)",
         "kicker": "#5c7d5c", "box_bg": "#ffffff", "box_bd": "#e8e2d9",
         "ink": "#3a352f", "gold": "#5c7d5c", "sub": "#6b6459",
-        "foot": "#5c7d5c", "page": "#a89f92", "leaf": " 🌿",
+        "foot": "#5c7d5c", "page": "#a89f92", "leaf": " 🌿", "font": FONT_SANS,
     },
 }
 
@@ -81,7 +90,7 @@ def card_html(card, t):
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
 * {{ margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }}
 body {{ width:1080px; height:1350px; position:relative; overflow:hidden;
-  background:{t['bg_layers']}; font-family:{CJK}; }}
+  background:{t['bg_layers']}; font-family:{t['font']}; }}
 .frame {{ position:absolute; inset:34px; border:1px solid {t['frame']}; border-radius:10px; }}
 .wm {{ position:absolute; top:30px; left:0; right:0; text-align:center;
   font-size:48px; color:{t['wm']}; letter-spacing:6px; }}

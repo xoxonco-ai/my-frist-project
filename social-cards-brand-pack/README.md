@@ -1,28 +1,34 @@
-# 浮生矩陣 social-cards 品牌包
+# 浮生矩陣 social-cards 品牌包（雙主題）
 
 給 [social-cards-engine](https://github.com/DennisWei9898/social-cards-engine) 用的品牌插件。
-接上它，圖卡就從「通用模板」變成你的療癒風格。
+**兩個主題，依房間分流**：黑金（洞察/覺醒）＋ 溫柔（陪伴/療癒）。都已修掉原本的模糊殘影。
 
-## 怎麼裝（2 步）
+## 兩個 pack
+
+| pack | 風格 | 用在哪些房間 |
+|------|------|--------------|
+| [`浮生矩陣-黑金/`](浮生矩陣-黑金/brand.md) | 近黑底・燙金・明體，貴氣有力量 | 見幻筆記・浮生解碼・登出指南 |
+| [`浮生矩陣-溫柔/`](浮生矩陣-溫柔/brand.md) | 奶油底・鼠尾草綠・黑體，留白療癒 | 木雕哲學・回家 |
+
+房間→主題對照見 [`room_theme_map.csv`](room_theme_map.csv)（提案，可改）。
+
+## 直接出圖（本環境已可跑）
 
 ```bash
-# 1. 把品牌包複製進 social-cards-engine
-cp -r 浮生矩陣 <social-cards-engine>/brands/浮生矩陣
-
-# 2. 從最接近的內建 pack 複製一份渲染模板，改配色即可
-cp <social-cards-engine>/brands/meme/render_template.py \
-   <social-cards-engine>/brands/浮生矩陣/render_template.py
-#   → 把裡面的色票換成 brand.md 的 CSS 變數（奶油底/鼠尾草綠/暖褐字）
+python render_preview.py     # 兩主題各出 D01 樣卡到 out/
 ```
+`render_preview.py` 已內建兩主題色票、字體（黑金=明體 Noto Serif TC / 溫柔=黑體）、
+房間路由，以及乾淨版型（**無模糊殘影層**）。
 
+## 裝進 social-cards-engine
+
+```bash
+cp -r 浮生矩陣-黑金 浮生矩陣-溫柔 <social-cards-engine>/brands/
+```
 之後在 Claude Code 說：
-> 用 social-cards 幫我做圖卡，品牌用**浮生矩陣**，讀 D01 的 `2_1230_IG輪播貼文.md`，依【輪播說明】做 7 張，第 7 張 CTA 關鍵字用「入口」。
+> 用 social-cards 做圖卡，房間是「浮生解碼」（→自動走黑金），讀 D03 的輪播檔，做 7 張，第 7 張 CTA 關鍵字「金錢劇本」。
 
-## 內容
-
-- **`浮生矩陣/brand.md`** — 完整品牌規格：真實色票、字體、留白母題、房間標籤、
-  anti-hype 硬邊界、封面/CTA 規則（已對齊 social-post 的 sends>saves>likes 與模組 5 自動私訊）。
-
-## 還沒做的（要的話跟我說）
-- `render_template.py`：實際渲染的 Python（4:5 HTML→PNG）。我可以照 brand.md 的色票幫你寫一版，
-  但需要對齊 social-cards-engine 的模板介面——你說一聲我就做。
+## 設計重點
+- **色票**取自真實素材（黑金＝你實際圖卡；溫柔＝療癒替代版），非憑感覺。
+- **封面/CTA** 對齊 social-post 的 sends>saves>likes；關鍵字回扣**模組 5** 自動私訊。
+- **anti-hype 硬邊界**寫進兩包，碰到恐嚇/神化/顯化由 carousel-joker 擋下。
