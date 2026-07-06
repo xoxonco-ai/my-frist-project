@@ -98,6 +98,8 @@ def main() -> None:
     args = ap.parse_args()
 
     if args.file:
+        if not os.path.exists(args.file):
+            sys.exit(f"錯誤：找不到檔案 {args.file}")
         with open(args.file, encoding="utf-8") as fh:
             draft = fh.read().strip()
     elif args.text:

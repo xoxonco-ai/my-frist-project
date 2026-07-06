@@ -55,12 +55,12 @@ def fetch_instagram() -> list[dict]:
         {"fields": "caption,like_count,comments_count,timestamp", "limit": 5,
          "access_token": token},
     )
-    for p in media.get("data", []):
+    for p in media.get("data") or []:
         cap = (p.get("caption") or "")[:20].replace("\n", " ")
         rows.append({
             "平台": "Instagram",
             "指標": f"貼文「{cap}…」",
-            "數值": f"❤{p.get('like_count', 0)} 💬{p.get('comments_count', 0)}",
+            "數值": f"❤{p.get('like_count') or 0} 💬{p.get('comments_count') or 0}",
         })
     return rows
 
@@ -77,11 +77,11 @@ def fetch_facebook() -> list[dict]:
         {"fields": "message,shares,comments.summary(true),likes.summary(true)",
          "limit": 5, "access_token": token},
     )
-    for p in posts.get("data", []):
+    for p in posts.get("data") or []:
         msg = (p.get("message") or "")[:20].replace("\n", " ")
-        likes = p.get("likes", {}).get("summary", {}).get("total_count", 0)
-        comments = p.get("comments", {}).get("summary", {}).get("total_count", 0)
-        shares = p.get("shares", {}).get("count", 0)
+        likes = ((p.get("likes") or {}).get("summary") or {}).get("total_count") or 0
+        comments = ((p.get("comments") or {}).get("summary") or {}).get("total_count") or 0
+        shares = (p.get("shares") or {}).get("count") or 0
         rows.append({
             "平台": "Facebook",
             "指標": f"貼文「{msg}…」",
@@ -101,15 +101,20 @@ def fetch_threads() -> list[dict]:
         f"{THREADS}/{uid}/threads",
         {"fields": "text,timestamp", "limit": 5, "access_token": token},
     )
-    for p in posts.get("data", []):
+    for p in posts.get("data") or []:
         txt = (p.get("text") or "")[:20].replace("\n", " ")
         # 單則貼文洞察：讚、回覆、瀏覽
         ins = _get(
-            f"{THREADS}/{p['id']}/insights",
+            f"{THREADS}/{p.get('id')}/insights",
             {"metric": "likes,replies,views", "access_token": token},
         )
-        stats = {m["name"]: (m.get("values", [{}])[0].get("value", 0))
-                 for m in ins.get("data", [])}
+        stats = {}
+        for m in ins.get("data") or []:
+            if not (isinstance(m, dict) and "name" in m):
+                continue
+            values = m.get("values")
+            first = values[0] if isinstance(values, list) and values else {}
+            stats[m["name"]] = (first.get("value") if isinstance(first, dict) else 0) or 0
         rows.append({
             "平台": "Threads",
             "指標": f"貼文「{txt}…」",
@@ -131,13 +136,17 @@ def fetch_douyin() -> list[dict]:
             "https://open.douyin.com/api/douyin/v1/video/video_list/",
             {"access_token": token, "count": 5, "cursor": 0},
         )
-        for v in data.get("data", {}).get("list", []):
+        data_obj = data.get("data") or {}
+        video_list = (data_obj.get("list") or []) if isinstance(data_obj, dict) else []
+        for v in video_list:
+            if not isinstance(v, dict):
+                continue
             title = (v.get("title") or "")[:20]
-            s = v.get("statistics", {})
+            s = v.get("statistics") or {}
             rows.append({
                 "平台": "抖音",
                 "指標": f"影片「{title}…」",
-                "數值": f"▶{s.get('play_count', 0)} ❤{s.get('digg_count', 0)}",
+                "數值": f"▶{s.get('play_count') or 0} ❤{s.get('digg_count') or 0}",
             })
     except RuntimeError as e:
         rows.append({"平台": "抖音", "指標": "抓取失敗", "數值": str(e)[:40]})

@@ -46,13 +46,22 @@ def research(tag: str, top: int) -> None:
          "fields": "caption,like_count,comments_count,media_type,permalink",
          "limit": top, "access_token": token},
     )
-    rows = posts.get("data", [])
-    rows.sort(key=lambda p: p.get("like_count", 0), reverse=True)
+    rows = posts.get("data") or []
+    if not isinstance(rows, list):
+        rows = []
+    rows.sort(
+        key=lambda p: (p.get("like_count") or 0) if isinstance(p, dict) else 0,
+        reverse=True,
+    )
 
     print(f"\n🔍 #{tag} 熱門公開貼文（依讚數，共 {len(rows)} 則）\n")
     for i, p in enumerate(rows, 1):
+        if not isinstance(p, dict):
+            continue
         cap = (p.get("caption") or "").replace("\n", " ")[:45]
-        print(f"{i:>2}. ❤{p.get('like_count', 0):<6} 💬{p.get('comments_count', 0):<5} "
+        like_count = p.get("like_count") or 0
+        comment_count = p.get("comments_count") or 0
+        print(f"{i:>2}. ❤{like_count:<6} 💬{comment_count:<5} "
               f"[{p.get('media_type', '')}] {cap}…")
         print(f"     {p.get('permalink', '')}")
     print("\n提示：看『高讚』貼文的開頭句與選題角度，換成你的思想家視角重做一支。")
