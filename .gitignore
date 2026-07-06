@@ -9,3 +9,6 @@ output/
 # 模組 5：名單與臨時關鍵字檔（含個資，不上傳）
 modules/5-auto-reply/leads.csv
 modules/5-auto-reply/keyword_map.new.csv
+
+# 圖卡渲染輸出（大檔，不上傳）
+social-cards-brand-pack/out/
