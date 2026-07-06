@@ -12,3 +12,5 @@ modules/5-auto-reply/keyword_map.new.csv
 
 # 圖卡渲染輸出（大檔，不上傳）
 social-cards-brand-pack/out/
+# 底圖為品牌素材（大檔），放本機不入 git
+social-cards-brand-pack/浮生矩陣-黑金/backgrounds/
