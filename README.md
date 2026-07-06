@@ -16,6 +16,9 @@
 | **2** | [自己帳號數據儀表板](modules/2-analytics-dashboard/) | 官方 API 串接，一頁看完全平台表現 | 你的商業帳號 + API 金鑰 |
 | **3** | [一稿多平台改寫工具](modules/3-multiplatform-rewriter/) | 一篇文自動改成各平台語感 | Anthropic API 金鑰 |
 | **4** | [公開內容研究](modules/4-content-research/) | 合規蒐集靈感 + 競品分析 | 依平台而定 |
+| **5** | [關鍵字自動私訊](modules/5-auto-reply/) | 留言關鍵字→自動私訊練習+收名單 | IG 商業帳號 + Meta 權限 |
+
+搭配文件：[流量演算強化規格](docs/02-流量演算強化規格.md) — 貼進你的 `social-post` / `social-cards` skill，讓每篇發文自動做流量預檢。
 
 ---
 
