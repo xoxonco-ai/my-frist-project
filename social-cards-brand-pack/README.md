@@ -3,6 +3,8 @@
 給 [social-cards-engine](https://github.com/DennisWei9898/social-cards-engine) 用的品牌插件。
 **兩個主題，依房間分流**：黑金（洞察/覺醒）＋ 溫柔（陪伴/療癒）。都已修掉原本的模糊殘影。
 
+> 📌 **下次要出圖看這裡 → [USAGE.md](USAGE.md)**（兩條路：這個網頁 / 你 Mac，含確切指令）
+
 ## 兩個 pack
 
 | pack | 風格 | 用在哪些房間 |
