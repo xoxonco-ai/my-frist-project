@@ -143,7 +143,7 @@ def main():
             cc = {"bg": bg, "kicker": c["kicker"], "page": f"{i:02d} / {n:02d}",
                   "title": c["title"], "body": c["body"], "cover": c["cover"]}
             _screenshot(os.path.join(ddir, f"{i:02d}_carousel.png"), card_html(cc), "1080,1350")
-        render_story(os.path.join(ddir, "99_story_問答.png"), story_html(day))
+        render_story(os.path.join(ddir, f"{n + 1:02d}_story_問答.png"), story_html(day))
         print("done", day["day"])
 
 
