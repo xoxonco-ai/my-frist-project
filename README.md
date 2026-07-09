@@ -317,6 +317,24 @@ You can also invoke skills directly:
 - `revops` - Lead lifecycle, scoring, routing, pipeline management
 - `sales-enablement` - Sales decks, one-pagers, objection docs, demo scripts
 
+### Generative Media (muapi.ai)
+
+Vendored from [SamurAIGPT/Generative-Media-Skills](https://github.com/SamurAIGPT/Generative-Media-Skills). These skills call [muapi.ai](https://muapi.ai) via the `muapi-cli` (`npm install -g muapi-cli`, then `muapi auth configure`).
+
+- `muapi-ad-creative` - Ad creative sets: hero image, copy variations, platform crops
+- `muapi-ai-clipping` - Turn long videos into viral-ready short clips
+- `muapi-cinema-director` - Cinematic video direction for Veo3, Kling, Luma
+- `muapi-instagram-post` - On-brand Instagram post images with captions and hashtags
+- `muapi-logo-creator` - Minimalist, scalable logo generation
+- `muapi-nano-banana` - Reasoning-driven image generation (Gemini 3 style briefs)
+- `muapi-product-video-ad-maker` - Cinematic product video ads from a product photo
+- `muapi-seedance-2` - Seedance 2.0 video generation (text/image-to-video, editing)
+- `muapi-social-media-video` - Brand-aware social video from storyboard to render
+- `muapi-ugc-video-factory` - UGC-style 9:16 video ads from person + product photos
+- `muapi-ui-design` - High-fidelity UI/UX mockups with Atomic Design principles
+- `muapi-youtube-shorts` - Auto-generate 9:16 Shorts/TikTok/Reels from long-form video
+- `muapi-youtube-thumbnail` - High-CTR YouTube thumbnail design
+
 ## Contributing
 
 Found a way to improve a skill? Have a new skill to suggest? PRs and issues welcome!
