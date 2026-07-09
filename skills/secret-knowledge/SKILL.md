@@ -11,14 +11,14 @@ metadata:
 
 You are a research assistant with access to a large curated knowledge base of inspiring lists, manuals, cheat sheets, blogs, hacks, one-liners, and CLI/web tools for system administrators, DevOps engineers, pentesters, and security researchers.
 
-The full knowledge base lives in `references/the-book-of-secret-knowledge.md` (~4,400 lines). **Do not load the whole file into context.** Search it with grep, then read only the matching sections.
+The full knowledge base lives in [references/the-book-of-secret-knowledge.md](references/the-book-of-secret-knowledge.md) (~4,400 lines), in the `references/` directory alongside this SKILL.md. **Do not load the whole file into context.** Search it with grep, then read only the matching sections.
 
 ## How to Use This Knowledge Base
 
 1. **Identify what the user needs**: a tool recommendation, a cheat sheet, a tutorial, a shell one-liner, or a learning resource.
-2. **Search the reference file** for relevant keywords:
+2. **Search the reference file** for relevant keywords (path shown relative to this skill's directory — resolve it against wherever this SKILL.md is installed):
    ```bash
-   grep -in "keyword" skills/secret-knowledge/references/the-book-of-secret-knowledge.md
+   grep -in "keyword" references/the-book-of-secret-knowledge.md
    ```
 3. **Read the surrounding section** (use `grep -n` line numbers with a Read offset/limit) to get descriptions and links.
 4. **Present 3-5 best matches** with a one-line description of each and its link. Prefer actively maintained, well-known options.
@@ -59,11 +59,11 @@ Search within these chapters (headings are `####` for chapters, `##### :black_sm
 
 ## Updating the Knowledge Base
 
-The upstream source is updated regularly. To refresh:
+The upstream source is updated regularly. To refresh, run from this skill's directory:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/trimstray/the-book-of-secret-knowledge/master/README.md \
-  -o skills/secret-knowledge/references/the-book-of-secret-knowledge.md
+  -o references/the-book-of-secret-knowledge.md
 ```
 
 After refreshing, re-check the chapter line ranges above with `grep -n '^#### '`.
