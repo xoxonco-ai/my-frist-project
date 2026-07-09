@@ -168,7 +168,11 @@ type (
 
 // UpdatePCSCookies 去除重名Cookies, 同名cookeis只保留最新的
 func (pcs *BaiduPCS) UpdatePCSCookies(reverse bool) {
-	cookies := pcs.GetClient().Jar.Cookies(baiduComURL)
+	client := pcs.GetClient()
+	if client.Jar == nil {
+		return
+	}
+	cookies := client.Jar.Cookies(baiduComURL)
 	new_cookies := make([]*http.Cookie, 0)
 	usedKeys := make(map[string]string)
 	if reverse {
@@ -201,7 +205,6 @@ func (pcs *BaiduPCS) UpdatePCSCookies(reverse bool) {
 			}
 		}
 	}
-	client := pcs.GetClient()
 	client.ResetCookiejar()
 	// fmt.Println(len(new_cookies))
 	// for _, c := range new_cookies {

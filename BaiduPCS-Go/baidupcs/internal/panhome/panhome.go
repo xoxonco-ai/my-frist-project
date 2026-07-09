@@ -4,6 +4,7 @@ import (
 	"github.com/qjfoidnh/BaiduPCS-Go/baidupcs/expires"
 	"github.com/qjfoidnh/BaiduPCS-Go/requester"
 	"net/url"
+	"sync"
 )
 
 const (
@@ -26,6 +27,7 @@ type (
 		ua     string
 		bduss  string
 
+		mu           sync.Mutex
 		sign1, sign3 []rune
 		timestamp    string
 

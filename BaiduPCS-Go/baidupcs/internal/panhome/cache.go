@@ -14,6 +14,9 @@ func (ph *PanHome) SetSignExpires() {
 
 // CacheSignature 在有效期内返回缓存结果
 func (ph *PanHome) CacheSignature() (sign SignRes, err error) {
+	ph.mu.Lock()
+	defer ph.mu.Unlock()
+
 	if ph.signExpires == nil || ph.signExpires.IsExpires() {
 		// 先签名再设置有效期
 		ph.signRes, err = ph.Signature()

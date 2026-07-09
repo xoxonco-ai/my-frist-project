@@ -365,13 +365,18 @@ func (dtu *DownloadTaskUnit) pcsOrStreamingDownload(mode DownloadMode, result *t
 // checkFileValid 检测文件有效性
 func (dtu *DownloadTaskUnit) checkFileValid(result *taskframework.TaskUnitRunResult) (ok bool) {
 	fi, err := os.Stat(dtu.SavePath)
-	if err == nil {
-		if fi.Size() != dtu.FileInfo.Size {
-			result.ResultMessage = StrDownloadCheckLengthFailed
-			result.NeedNextdindex = true
-			result.NeedRetry = true
-			return
-		}
+	if err != nil {
+		result.ResultMessage = "本地文件不存在或读取失败"
+		result.Err = err
+		result.NeedRetry = true
+		return false
+	}
+
+	if fi.Size() != dtu.FileInfo.Size {
+		result.ResultMessage = StrDownloadCheckLengthFailed
+		result.NeedNextdindex = true
+		result.NeedRetry = true
+		return false
 	}
 	if dtu.Cfg.IsTest || dtu.NoCheck {
 		// 不检测文件有效性

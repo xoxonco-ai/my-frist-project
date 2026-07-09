@@ -61,10 +61,16 @@ func (pcs *BaiduPCS) ExtractShareInfo(shareURL, shardID, shareUK, bdstoken strin
 	}
 	res["filename"] = gjson.Get(string(body), `list.0.server_filename`).String()
 	fsidList := gjson.Get(string(body), `list.#.fs_id`).Array()
-	var fidsStr string = "["
-	for _, sid := range fsidList {
-		fidsStr += sid.String() + ","
+	var sb strings.Builder
+	sb.WriteString("[")
+	for i, sid := range fsidList {
+		if i > 0 {
+			sb.WriteString(",")
+		}
+		sb.WriteString(sid.String())
 	}
+	sb.WriteString("]")
+	fidsStr := sb.String()
 
 	res["shareid"] = shardID
 	res["from"] = shareUK
@@ -84,7 +90,7 @@ func (pcs *BaiduPCS) ExtractShareInfo(shareURL, shardID, shareUK, bdstoken strin
 	}
 	res["item_num"] = strconv.Itoa(len(fsidList))
 	res["ErrMsg"] = "success"
-	res["fs_id"] = fidsStr[:len(fidsStr)-1] + "]"
+	res["fs_id"] = fidsStr
 	shareUrl.RawQuery = uv.Encode()
 	res["shareUrl"] = shareUrl.String()
 	return

@@ -10,7 +10,6 @@ import (
 	"io"
 	"math/rand"
 	"path"
-	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -143,9 +142,9 @@ func DecryptMD5(rawMD5 string) string {
 	if len(rawMD5) != 32 {
 		return rawMD5
 	}
-	var keychar string = rawMD5[9:10]
-	match, _ := regexp.MatchString("[a-f0-9]", keychar)
-	if match {
+	keychar := rawMD5[9]
+	isHex := (keychar >= 'a' && keychar <= 'f') || (keychar >= '0' && keychar <= '9')
+	if isHex {
 		return rawMD5
 	}
 	sliceFirst := fmt.Sprintf("%x", []rune(rawMD5)[9]-'g')

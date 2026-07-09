@@ -202,6 +202,9 @@ func (c *PCSConfig) loadConfigFromFile() (err error) {
 		return err
 	}
 
+	c.fileMu.Lock()
+	defer c.fileMu.Unlock()
+
 	// 未初始化
 	info, err := c.configFile.Stat()
 	if err != nil {
@@ -209,12 +212,11 @@ func (c *PCSConfig) loadConfigFromFile() (err error) {
 	}
 
 	if info.Size() == 0 {
+		c.fileMu.Unlock()
 		err = c.Save()
+		c.fileMu.Lock()
 		return err
 	}
-
-	c.fileMu.Lock()
-	defer c.fileMu.Unlock()
 
 	_, err = c.configFile.Seek(0, os.SEEK_SET)
 	if err != nil {
