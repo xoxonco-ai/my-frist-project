@@ -10,8 +10,11 @@
 # CPU 環境（無 GPU）
 ./scripts/install-livetalking.sh
 
-# GPU 環境（CUDA 12.8）
+# GPU 環境（預設 CUDA 12.8）
 GPU=1 ./scripts/install-livetalking.sh
+
+# GPU 環境（其他 CUDA 版本，例如 12.4）
+GPU=1 CUDA_VERSION=cu124 ./scripts/install-livetalking.sh
 ```
 
 腳本會：
