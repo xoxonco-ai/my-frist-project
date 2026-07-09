@@ -89,6 +89,19 @@ See each skill's **Related Skills** section for the full dependency map.
 | [marketing-plan](skills/marketing-plan/) | When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use... |
 | [marketing-psychology](skills/marketing-psychology/) | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when... |
 | [mate-perspective](skills/mate-perspective/) | | |
+| [muapi-ad-creative](skills/muapi-ad-creative/) | Generate a high-converting ad creative set — hero image, ad copy variations, and platform-optimized crops for Meta,... |
+| [muapi-ai-clipping](skills/muapi-ai-clipping/) | Turn a long video into N viral-ready short clips with a single managed API call. Wraps muapi.ai's `/ai-clipping`... |
+| [muapi-cinema-director](skills/muapi-cinema-director/) | Direct high-fidelity cinematic video with AI — translates creative intent into technical cinematographic directives for... |
+| [muapi-instagram-post](skills/muapi-instagram-post/) | Create a polished, on-brand Instagram post — square or portrait hero image with matching caption and hashtags. |
+| [muapi-logo-creator](skills/muapi-logo-creator/) | Engineer professional-grade brand logos using geometric primitives and negative space — generates minimalist, scalable... |
+| [muapi-nano-banana](skills/muapi-nano-banana/) | Reasoning-driven image generation using structured creative briefs (Gemini 3 style) — generates high-fidelity images... |
+| [muapi-product-video-ad-maker](skills/muapi-product-video-ad-maker/) | Create a high-end cinematic product video advertisement starting from a simple product photo. |
+| [muapi-seedance-2](skills/muapi-seedance-2/) | Expert Cinema Director skill for Seedance 2.0 (ByteDance) — high-fidelity video generation across Chinese, Global, and... |
+| [muapi-social-media-video](skills/muapi-social-media-video/) | Brand-aware social media video creator. Reads brand-identity.md, ICP.md, and messaging.md to write a post/storyboard,... |
+| [muapi-ugc-video-factory](skills/muapi-ugc-video-factory/) | Turn a person photo + a product photo + an optional script into a vertical 9:16 UGC-style video ad. Generates a... |
+| [muapi-ui-design](skills/muapi-ui-design/) | Generate high-fidelity UI/UX mockups for mobile and web apps using Atomic Design principles — creates wireframes and... |
+| [muapi-youtube-shorts](skills/muapi-youtube-shorts/) | Auto-generate viral 9:16 YouTube Shorts (or TikTok / Reels clips) from a long-form video. Thin platform-aware wrapper... |
+| [muapi-youtube-thumbnail](skills/muapi-youtube-thumbnail/) | Design a high-CTR YouTube thumbnail — striking imagery, bold text placement, and emotional face/subject if needed. |
 | [offers](skills/offers/) | When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing,... |
 | [onboarding](skills/onboarding/) | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also... |
 | [paywalls](skills/paywalls/) | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use... |
