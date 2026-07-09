@@ -40,6 +40,9 @@ output/
 modules/5-auto-reply/leads.csv
 modules/5-auto-reply/keyword_map.new.csv
 
+# LiveTalking 本地安裝目錄（由 scripts/install-livetalking.sh 建立，含 venv 大檔）
+/LiveTalking/
+
 # 圖卡渲染輸出（大檔，不上傳）
 social-cards-brand-pack/out/
 # 底圖為品牌素材（大檔），放本機不入 git
