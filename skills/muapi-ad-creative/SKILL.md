@@ -28,7 +28,7 @@ This skill has TWO phases. Phase A creates the hero concept for approval; Phase 
 
 ### Phase A — Hero image + Ad copy
 
-Submit ONE the plan with:
+Submit ONE plan with:
 
 1. **Hero image** — `muapi image generate` (model=nano-banana-pro) or `muapi image edit` (model=nano-banana-pro-edit) if `{{product_image}}` is provided:
    - Aspect ratio: 1:1 (universal starting point).
@@ -46,7 +46,7 @@ Ask which copy variation to use for Phase B. Wait for user confirmation.
 
 ### Phase B — Platform crops
 
-Once the user picks a copy direction, submit a SECOND the plan with parallel crops:
+Once the user picks a copy direction, submit a SECOND plan with parallel crops:
 
 1. `muapi image edit` → 1:1 (Facebook/Instagram feed, 1080×1080)
 2. `muapi image edit` → 9:16 (Story/Reels, 1080×1920)

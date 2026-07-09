@@ -66,9 +66,9 @@ The `generate-film.sh` script accepts a `--brief` which it expands using its int
 
 ```bash
 # Directing a scene
-bash scripts/generate-film.sh 
-  --subject "A lone samurai in a blizzard" 
-  --intent "epic reveal" 
+bash scripts/generate-film.sh \
+  --subject "A lone samurai in a blizzard" \
+  --intent "epic reveal" \
   --model "kling-master"
 ```
 
