@@ -8,7 +8,7 @@
 
 ## 一、已安裝 Skill 總覽
 
-共 **55 個 skills**(`skills/`)+ **2 個補充視角**(`perspective-skills/`)+ **4 個模組工具**(`modules/`)+ **1 個圖卡品牌包**(`social-cards-brand-pack/`)。
+共 **56 個 skills**(`skills/`)+ **2 個補充視角**(`perspective-skills/`)+ **4 個模組工具**(`modules/`)+ **1 個圖卡品牌包**(`social-cards-brand-pack/`)。
 
 ### 1. 療癒/覺醒視角庫(12 個)— 選題與觀點的靈魂
 
@@ -99,7 +99,7 @@
 | `competitors` | 比較頁/替代方案頁 |
 | `competitor-profiling` | 競品深度研究 |
 
-### 8. 策略與研究(5 個)
+### 8. 策略與研究(6 個)
 
 | Skill | 用途 |
 |-------|------|
