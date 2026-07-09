@@ -38,13 +38,13 @@ cd Pixelle-Video
 uv run streamlit run web/app.py
 ```
 
-開啟瀏覽器前往 http://localhost:8501 ，然後在網頁介面中設定：
+開啟瀏覽器前往 http://localhost:8501 ，然後在網頁介面中設定： / Open your browser at http://localhost:8501, then configure the following in the web UI:
 
-1. **LLM**：OpenAI、通義千問（Qwen）、DeepSeek、Ollama 等的 API 金鑰
-2. **圖像/影片生成**：ComfyUI、RunningHub，或 DashScope / OpenAI / Kling 等直連 API
-3. **語音合成（TTS）**：Edge-TTS（免費預設）、Index-TTS 等
+1. **LLM**：OpenAI、通義千問（Qwen）、DeepSeek、Ollama 等的 API 金鑰 / API keys for OpenAI, Qwen, DeepSeek, Ollama, etc.
+2. **圖像/影片生成 / Image & video generation**：ComfyUI、RunningHub，或 DashScope / OpenAI / Kling 等直連 API / ComfyUI, RunningHub, or direct APIs such as DashScope / OpenAI / Kling
+3. **語音合成（TTS） / Text-to-speech**：Edge-TTS（免費預設 / free default）、Index-TTS 等 / etc.
 
 ## 其他部署方式 / Alternatives
 
-- **Docker**：倉庫內含 `Dockerfile` 與 `docker-compose.yml`，可用 `docker compose up` 啟動
-- **Windows 一鍵包**：官方提供免安裝整合包，解壓後執行 `start.bat`
+- **Docker**：倉庫內含 `Dockerfile` 與 `docker-compose.yml`，可用 `docker compose up` 啟動 / The repo ships a `Dockerfile` and `docker-compose.yml`; start with `docker compose up`
+- **Windows 一鍵包 / Windows one-click package**：官方提供免安裝整合包，解壓後執行 `start.bat` / An official portable package is available; extract it and run `start.bat`
