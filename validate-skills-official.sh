@@ -18,11 +18,11 @@ if [ ! -d "$SKILLS_REF_DIR/.venv" ]; then
     echo ""
 
     if [ ! -d "$SKILLS_REF_DIR" ]; then
-        cd /tmp
+        cd /tmp || exit 1
         git clone https://github.com/agentskills/agentskills.git
     fi
 
-    cd "$SKILLS_REF_DIR"
+    cd "$SKILLS_REF_DIR" || exit 1
 
     if command -v uv &> /dev/null; then
         echo "Using uv to install..."
@@ -40,7 +40,7 @@ fi
 source "$SKILLS_REF_DIR/.venv/bin/activate"
 
 # Return to the original directory (captured before any prior cd calls)
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR" || exit 1
 
 # Track results
 PASSED=0
