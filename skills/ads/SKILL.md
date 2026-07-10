@@ -133,10 +133,10 @@ These ratios are directional, not precise. Test in your actual account.
 
 Once you've gathered audience identifiers, here's how to put each kind into the creative:
 
-- **Demographic identifiers** (age, location, occupation) → embed as identity-trigger keywords in headlines (see [references/meta-andromeda-playbook.md](references/meta-andromeda-playbook.md), "The one-keyword hack")
+- **Demographic identifiers** (age, location, occupation) → embed as identity-trigger keywords in headlines (see [The one-keyword hack](references/meta-andromeda-playbook.md#the-one-keyword-hack-identity-trigger-keywords))
 - **Pain points + fears** → headline + first line of body copy (Sabri Suby's framing: "the verbatim words your customers use about the problem")
 - **Hopes / desired outcomes** → transformation copy + CTAs
-- **Objections + "why they didn't buy last time"** → objection-handling retargeting ads (see [references/retargeting-strategies.md](references/retargeting-strategies.md), "The 4-component retargeting framework")
+- **Objections + "why they didn't buy last time"** → objection-handling retargeting ads (see [The 4-component retargeting framework](references/retargeting-strategies.md#the-4-component-retargeting-framework))
 - **Their language / vocabulary** → the entire copy voice — never use industry jargon they don't
 - **Existing customer base** → still feed it for lookalike audiences (see Key Concepts below)
 - **Niche / segment they identify with** → identity-trigger keywords in headline ("for dentists" / "for B2B founders" / "for parents of toddlers")
@@ -144,7 +144,7 @@ Once you've gathered audience identifiers, here's how to put each kind into the 
 ### Key Concepts (still apply)
 
 - **Lookalikes**: Base on best customers (by LTV), not all customers. Still high-value across platforms.
-- **Retargeting**: Segment by funnel stage (visitors vs. cart abandoners). See [references/retargeting-strategies.md](references/retargeting-strategies.md) for the modern playbook.
+- **Retargeting**: Segment by funnel stage (visitors vs. cart abandoners). See [Retarget with DIFFERENT offers](references/retargeting-strategies.md#retarget-with-different-offers-not-the-same-one) for the modern playbook.
 - **Exclusions**: Exclude existing customers and recent converters — showing ads to people who already bought wastes spend.
 
 ### Common failure mode
@@ -307,7 +307,7 @@ The most common scaling failure: a business at a 40 ROAS spending $5k/month, ref
 **Outbound-call your leads who didn't convert:**
 - Every lead that downloaded a lead magnet or hit your funnel but didn't buy gets a call
 - Ask why they didn't book, what was confusing, what the actual blocker was
-- These verbatim answers become objection-handling ads (see [references/retargeting-strategies.md](references/retargeting-strategies.md))
+- These verbatim answers become objection-handling ads (see [The 4-component retargeting framework](references/retargeting-strategies.md#the-4-component-retargeting-framework))
 - Massive insight-to-creative loop that most advertisers skip
 
 ---
