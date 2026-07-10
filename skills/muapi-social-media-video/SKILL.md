@@ -4,7 +4,7 @@ description: Brand-aware social media video creator. Reads brand-identity.md, IC
 metadata:
   slug: muapi-social-media-video
   version: "1.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 # Social Media Video Creator

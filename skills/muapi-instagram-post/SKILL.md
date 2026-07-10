@@ -4,7 +4,7 @@ description: Create a polished, on-brand Instagram post — square or portrait h
 metadata:
   slug: muapi-instagram-post
   version: "1.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 

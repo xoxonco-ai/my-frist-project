@@ -4,7 +4,7 @@ description: Turn a long video into N viral-ready short clips with a single mana
 metadata:
   slug: muapi-ai-clipping
   version: "1.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 # AI Clipping

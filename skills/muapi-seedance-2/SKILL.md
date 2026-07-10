@@ -4,7 +4,7 @@ description: Expert Cinema Director skill for Seedance 2.0 (ByteDance) — high-
 metadata:
   slug: muapi-seedance-2
   version: "0.3.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 # 🎬 Seedance 2.0 Cinema Expert

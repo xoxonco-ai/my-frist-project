@@ -4,7 +4,7 @@ description: Create a high-end cinematic product video advertisement starting fr
 metadata:
   slug: muapi-product-video-ad-maker
   version: "1.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 

@@ -4,7 +4,7 @@ description: Turn a person photo + a product photo + an optional script into a v
 metadata:
   slug: muapi-ugc-video-factory
   version: "1.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 

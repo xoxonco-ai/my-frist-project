@@ -4,7 +4,7 @@ description: Design a high-CTR YouTube thumbnail — striking imagery, bold text
 metadata:
   slug: muapi-youtube-thumbnail
   version: "1.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 

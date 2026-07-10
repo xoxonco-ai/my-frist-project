@@ -4,7 +4,7 @@ description: Generate a high-converting ad creative set — hero image, ad copy 
 metadata:
   slug: muapi-ad-creative
   version: "1.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 

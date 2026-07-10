@@ -4,7 +4,7 @@ description: Auto-generate viral 9:16 YouTube Shorts (or TikTok / Reels clips) f
 metadata:
   slug: muapi-youtube-shorts
   version: "2.0.0"
-  acceptLicenseTerms: true
+  acceptLicenseTerms: "true"
 ---
 
 # YouTube Shorts Generator
