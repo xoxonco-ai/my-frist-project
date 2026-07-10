@@ -1,9 +1,10 @@
 ---
-slug: muapi-instagram-post
 name: muapi-instagram-post
-version: "1.0.0"
 description: Create a polished, on-brand Instagram post — square or portrait hero image with matching caption and hashtags.
-acceptLicenseTerms: true
+metadata:
+  slug: muapi-instagram-post
+  version: "1.0.0"
+  acceptLicenseTerms: "true"
 ---
 
 
