@@ -1,9 +1,10 @@
 ---
-slug: muapi-seedance-2
 name: muapi-seedance-2
-version: "0.3.0"
 description: Expert Cinema Director skill for Seedance 2.0 (ByteDance) — high-fidelity video generation across Chinese, Global, and VIP tiers. Supports text-to-video, image-to-video, first-last-frame, omni reference, character training, omni-reference training, video editing, and watermark removal.
-acceptLicenseTerms: true
+metadata:
+  slug: muapi-seedance-2
+  version: "0.3.0"
+  acceptLicenseTerms: true
 ---
 
 # 🎬 Seedance 2.0 Cinema Expert

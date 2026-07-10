@@ -3,6 +3,7 @@
 # Validation script using official skills-ref library
 # https://github.com/agentskills/agentskills/tree/main/skills-ref
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILLS_DIR="skills"
 SKILLS_REF_DIR="/tmp/agentskills/skills-ref"
 
@@ -38,8 +39,8 @@ fi
 # Activate the virtual environment
 source "$SKILLS_REF_DIR/.venv/bin/activate"
 
-# Return to the original directory
-cd "$(dirname "$0")"
+# Return to the original directory (captured before any prior cd calls)
+cd "$SCRIPT_DIR"
 
 # Track results
 PASSED=0
