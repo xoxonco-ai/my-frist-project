@@ -158,7 +158,11 @@ def audio_duration(audio_path: Path) -> float:
     if result.returncode != 0:
         raise SystemExit(f"ffprobe failed: {result.stderr.strip()}")
     fmt = json.loads(result.stdout or "{}").get("format", {})
-    return float(fmt.get("duration") or 0.0)
+    # ffprobe may report "N/A" for duration; degrade to 0.0 rather than crash.
+    try:
+        return float(fmt.get("duration") or 0.0)
+    except (ValueError, TypeError):
+        return 0.0
 
 
 def split_audio(

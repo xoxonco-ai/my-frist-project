@@ -108,13 +108,23 @@ def get_metadata(video_path: str) -> dict:
     video_stream = next((s for s in streams if s.get("codec_type") == "video"), {})
     audio_stream = next((s for s in streams if s.get("codec_type") == "audio"), None)
 
-    duration = float(fmt.get("duration") or video_stream.get("duration") or 0)
+    # ffprobe can report "N/A" for duration/size (live streams, pipes, some
+    # corrupted files); guard the numeric conversions so metadata parsing
+    # degrades to 0 instead of crashing.
+    try:
+        duration = float(fmt.get("duration") or video_stream.get("duration") or 0)
+    except (ValueError, TypeError):
+        duration = 0.0
+    try:
+        size_bytes = int(fmt.get("size") or 0)
+    except (ValueError, TypeError):
+        size_bytes = 0
     return {
         "duration_seconds": duration,
         "width": video_stream.get("width"),
         "height": video_stream.get("height"),
         "codec": video_stream.get("codec_name"),
-        "size_bytes": int(fmt.get("size") or 0),
+        "size_bytes": size_bytes,
         "has_audio": audio_stream is not None,
     }
 

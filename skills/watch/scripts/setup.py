@@ -96,21 +96,13 @@ def _read_env_key(name: str) -> str | None:
     if not CONFIG_FILE.exists():
         return None
     _check_file_permissions(CONFIG_FILE)
+    # Reuse config's parser so quote/inline-comment handling stays consistent
+    # (and correct) in one place rather than duplicated here.
     try:
-        for line in CONFIG_FILE.read_text(encoding="utf-8").splitlines():
-            line = line.strip()
-            if not line or line.startswith("#") or "=" not in line:
-                continue
-            key, _, raw = line.partition("=")
-            if key.strip() != name:
-                continue
-            raw = raw.strip()
-            if len(raw) >= 2 and raw[0] in ('"', "'") and raw[-1] == raw[0]:
-                raw = raw[1:-1]
-            return raw or None
-    except OSError:
+        from config import read_env_file
+        return read_env_file(CONFIG_FILE).get(name) or None
+    except Exception:
         return None
-    return None
 
 
 def _have_api_key() -> tuple[bool, str | None]:
@@ -146,17 +138,16 @@ def _write_setup_complete() -> None:
     detect this marker to skip wizard-style UI and stay silent.
     """
     CONFIG_DIR.mkdir(parents=True, exist_ok=True)
-    existing = ""
     if CONFIG_FILE.exists():
-        existing = CONFIG_FILE.read_text(encoding="utf-8")
-        for line in existing.splitlines():
-            if line.strip().startswith("SETUP_COMPLETE="):
-                return
-        if existing and not existing.endswith("\n"):
-            existing += "\n"
-        CONFIG_FILE.write_text(existing + "SETUP_COMPLETE=true\n", encoding="utf-8")
+        lines = CONFIG_FILE.read_text(encoding="utf-8").splitlines()
     else:
-        CONFIG_FILE.write_text(ENV_TEMPLATE + "\nSETUP_COMPLETE=true\n", encoding="utf-8")
+        lines = ENV_TEMPLATE.splitlines()
+    # Drop any existing SETUP_COMPLETE line before appending the true marker, so
+    # a pre-existing `SETUP_COMPLETE=false` is overwritten rather than left in
+    # place (which would keep is_first_run() true and loop the installer).
+    lines = [ln for ln in lines if not ln.strip().startswith("SETUP_COMPLETE=")]
+    lines.append("SETUP_COMPLETE=true")
+    CONFIG_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
     try:
         CONFIG_FILE.chmod(0o600)
     except OSError:

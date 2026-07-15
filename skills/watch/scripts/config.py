@@ -30,13 +30,20 @@ def read_env_file(path: Path | None = None) -> dict[str, str]:
             continue
         key, _, value = raw.partition("=")
         value = value.strip()
-        if len(value) >= 2 and value[0] in ('"', "'") and value[-1] == value[0]:
-            value = value[1:-1]
+        if value[:1] in ('"', "'"):
+            # Quoted value: take everything up to the matching closing quote and
+            # discard any trailing inline comment (`KEY="val" # note`). Preserves
+            # a '#' that sits inside the quotes (e.g. an API key), which a naive
+            # comment-strip would truncate. A missing closing quote is left as-is.
+            quote = value[0]
+            end = value.find(quote, 1)
+            if end != -1:
+                value = value[1:end]
         else:
             # Strip an inline comment (a '#' preceded by whitespace) from an
             # unquoted value. Without this, `WATCH_DETAIL=balanced  # note`
             # parses as "balanced  # note", fails validation, and silently
-            # falls back to the default. Keeps '#' inside quotes / API keys.
+            # falls back to the default.
             for i, ch in enumerate(value):
                 if ch == "#" and i > 0 and value[i - 1] in " \t":
                     value = value[:i].rstrip()

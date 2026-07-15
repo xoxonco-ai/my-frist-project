@@ -128,13 +128,21 @@ def main() -> int:
             dl = download(args.source, work / "download")
         video_path = dl["video_path"]
 
-    meta = get_metadata(video_path) if video_path else {
-        "duration_seconds": float((dl.get("info") or {}).get("duration") or 0),
-        "width": None,
-        "height": None,
-        "codec": None,
-        "has_audio": False,
-    }
+    if video_path:
+        meta = get_metadata(video_path)
+    else:
+        # yt-dlp's reported duration may be missing or non-numeric; guard it.
+        try:
+            duration_seconds = float((dl.get("info") or {}).get("duration") or 0)
+        except (ValueError, TypeError):
+            duration_seconds = 0.0
+        meta = {
+            "duration_seconds": duration_seconds,
+            "width": None,
+            "height": None,
+            "codec": None,
+            "has_audio": False,
+        }
     full_duration = meta["duration_seconds"]
 
     start_sec = parse_time(args.start)
