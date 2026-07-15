@@ -71,7 +71,7 @@ async function pollForResult(requestId, maxAttempts, intervalMs) {
     try {
       const res = await fetch(`${BASE_URL}${path}`, { headers: headers() })
       if (!res.ok) {
-        if (res.status >= 500) continue
+        if (res.status >= 500 || res.status === 429) continue // transient error or rate limit, keep polling
         throw new Error(`Poll failed: ${res.status} - ${(await res.text()).slice(0, 200)}`)
       }
       const data = await res.json()
