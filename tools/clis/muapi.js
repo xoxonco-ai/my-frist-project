@@ -10,11 +10,8 @@
 
 const API_KEY = process.env.MUAPI_KEY
 const BASE_URL = (process.env.MUAPI_API_URL || 'https://api.muapi.ai').replace(/\/$/, '')
-
-if (!API_KEY) {
-  console.error(JSON.stringify({ error: 'MUAPI_KEY environment variable required (get one at https://muapi.ai)' }))
-  process.exit(1)
-}
+// Note: the MUAPI_KEY check is deferred to main() so `node muapi.js` (no args)
+// can print usage without a key, per the repo's "no args = help" convention.
 
 const DEFAULT_MODELS = {
   image: 'flux-dev',
@@ -23,6 +20,10 @@ const DEFAULT_MODELS = {
   imageToVideo: 'wan2.1-image-to-video',
 }
 
+// Known boolean flags never consume the following token as a value, so
+// `--dry-run image` keeps `image` as a positional command instead of losing it.
+const BOOLEAN_FLAGS = ['dry-run', 'no-wait']
+
 function parseArgs(argv) {
   const result = { _: [] }
   for (let i = 0; i < argv.length; i++) {
@@ -30,7 +31,7 @@ function parseArgs(argv) {
     if (arg.startsWith('--')) {
       const key = arg.slice(2)
       const next = argv[i + 1]
-      if (next && !next.startsWith('--')) {
+      if (next && !next.startsWith('--') && !BOOLEAN_FLAGS.includes(key)) {
         result[key] = next
         i++
       } else {
@@ -80,14 +81,21 @@ async function pollForResult(requestId, maxAttempts, intervalMs) {
     } catch (err) {
       // Tolerate transient network/JSON errors during the long poll; a video
       // job can run for many minutes and a brief blip shouldn't abort it.
-      if (/Generation failed/.test(err.message) || attempt === maxAttempts) throw err
+      // But terminal failures — a failed generation, or a non-5xx "Poll failed"
+      // (e.g. 401/404) — must propagate now, not retry up to maxAttempts.
+      if (/Generation failed/.test(err.message) || /Poll failed/.test(err.message) || attempt === maxAttempts) throw err
     }
   }
   throw new Error('Generation timed out while polling for the result')
 }
 
 function outputUrl(data) {
-  return (Array.isArray(data.outputs) && data.outputs[0]) || data.url || (data.output && data.output.url) || null
+  return (
+    (Array.isArray(data.outputs) && data.outputs[0]) ||
+    data.url ||
+    (typeof data.output === 'string' ? data.output : data.output && data.output.url) ||
+    null
+  )
 }
 
 // Submit a generation, then (unless --no-wait) poll until complete.
@@ -106,13 +114,27 @@ async function submit(model, payload, maxAttempts) {
   const requestId = data.request_id || data.id
   if (!requestId) return data
   if (args['no-wait']) return { request_id: requestId, status: 'submitted' }
-  const result = await pollForResult(requestId, maxAttempts, 2000)
-  return { request_id: requestId, status: result.status, url: outputUrl(result), outputs: result.outputs || undefined }
+  try {
+    const result = await pollForResult(requestId, maxAttempts, 2000)
+    return { request_id: requestId, status: result.status, url: outputUrl(result), outputs: result.outputs || undefined }
+  } catch (err) {
+    // Surface the request_id so a long job can be recovered via `result --id`.
+    err.message = `${err.message} (request_id: ${requestId}; retry with: muapi.js result --id ${requestId})`
+    throw err
+  }
 }
+
+const ACTIVE_COMMANDS = ['balance', 'image', 'video', 'generate', 'result']
 
 async function main() {
   const [cmd] = args._
   let result
+
+  // Only commands that hit the API need a key; usage/help works without one.
+  if (ACTIVE_COMMANDS.includes(cmd) && !API_KEY) {
+    console.error(JSON.stringify({ error: 'MUAPI_KEY environment variable required (get one at https://muapi.ai)' }))
+    process.exit(1)
+  }
 
   switch (cmd) {
     case 'balance':
