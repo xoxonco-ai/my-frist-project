@@ -1,4 +1,4 @@
-# Google RSA Output Spec (mandatory when generating RSAs)
+# Google RSA Output Spec
 
 When the user requests Google Ads RSAs (Responsive Search Ads), output MUST comply with these platform limits and structural requirements. Do not output any RSA that violates them.
 
