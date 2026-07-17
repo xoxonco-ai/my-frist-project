@@ -77,6 +77,10 @@ See each skill's **Related Skills** section for the full dependency map.
 | [directory-submissions](skills/directory-submissions/) | When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for... |
 | [emails](skills/emails/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email... |
 | [estes-perspective](skills/estes-perspective/) | | |
+| [fable-domain](skills/fable-domain/) | Discuss a domain with the user, research it from real sources, then generate a trusted skill bundle for it - a... |
+| [fable-judge](skills/fable-judge/) | Adversarial verification of finished work. Treats any "done" as a set of claims, then re-runs the claimed... |
+| [fable-loop](skills/fable-loop/) | End-to-end orchestrated workflow that runs a task the way Fable ran sessions - parallel evidence subagents, one... |
+| [fable-method](skills/fable-method/) | A step-by-step problem-solving loop (classify the ask, define done, gather evidence, decide, act surgically, verify by... |
 | [free-tools](skills/free-tools/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or... |
 | [hellinger-perspective](skills/hellinger-perspective/) | | |
 | [image](skills/image/) | When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product... |
