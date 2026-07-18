@@ -120,6 +120,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also... |
 | [satir-perspective](skills/satir-perspective/) | | |
 | [schema](skills/schema/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user... |
+| [secret-knowledge](skills/secret-knowledge/) | A curated knowledge base of sysadmin, DevOps, network, and security resources based on "The Book of Secret Knowledge"... |
 | [seo-audit](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO... |
 | [signup](skills/signup/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the... |
 | [site-architecture](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal... |
