@@ -107,6 +107,7 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | strapi | Headless CMS | ✓ | - | ✓ | ✓ | [strapi.md](integrations/strapi.md) |
 | composio | Integration Layer | ✓ | ✓ | ✓ | ✓ | [composio.md](integrations/composio.md) |
 | cogny | Integration Layer | - | ✓ | - | - | [cogny.md](integrations/cogny.md) |
+| baidupcs-go | Cloud Storage | - | - | ✓ | - | [baidupcs-go.md](integrations/baidupcs-go.md) |
 
 ---
 
