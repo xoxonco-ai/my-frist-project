@@ -23,6 +23,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | directory-submissions | 2.0.0 | 2026-05-05 |
 | emails | 2.0.0 | 2026-05-05 |
 | free-tools | 2.0.0 | 2026-05-05 |
+| hallmark | 1.1.0 | 2026-07-20 |
 | image | 2.0.1 | 2026-05-18 |
 | launch | 2.0.1 | 2026-06-16 |
 | lead-magnets | 2.0.0 | 2026-05-05 |
