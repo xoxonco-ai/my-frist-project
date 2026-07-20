@@ -51,9 +51,16 @@ function parseArgs(args) {
     const arg = args[i]
     if (arg.startsWith('--')) {
       const body = arg.slice(2)
+      // Bare "--" is the end-of-options delimiter: the rest are positional.
+      if (body === '') {
+        result._.push(...args.slice(i + 1))
+        break
+      }
       const eq = body.indexOf('=')
       if (eq !== -1) {
-        result[body.slice(0, eq)] = body.slice(eq + 1)
+        const key = body.slice(0, eq)
+        const val = body.slice(eq + 1)
+        result[key] = BOOLEAN_FLAGS.has(key) ? (val === 'true' || val === '1') : val
         continue
       }
       const key = body
