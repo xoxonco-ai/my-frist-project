@@ -41,13 +41,20 @@ async function api(method, path, body, useAccountToken) {
 }
 
 function parseArgs(args) {
+  const BOOLEAN_FLAGS = new Set(['dry-run'])
   const result = { _: [] }
   for (let i = 0; i < args.length; i++) {
     const arg = args[i]
     if (arg.startsWith('--')) {
-      const key = arg.slice(2)
+      const body = arg.slice(2)
+      const eq = body.indexOf('=')
+      if (eq !== -1) {
+        result[body.slice(0, eq)] = body.slice(eq + 1)
+        continue
+      }
+      const key = body
       const next = args[i + 1]
-      if (next && !next.startsWith('--')) {
+      if (!BOOLEAN_FLAGS.has(key) && next !== undefined && !next.startsWith('--')) {
         result[key] = next
         i++
       } else {
