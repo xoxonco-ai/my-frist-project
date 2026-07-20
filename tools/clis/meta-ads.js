@@ -24,6 +24,7 @@ async function api(method, path, body) {
   }
   const res = await fetch(url, opts)
   const text = await res.text()
+  if (!res.ok) process.exitCode = 1
   try {
     return JSON.parse(text)
   } catch {

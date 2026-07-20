@@ -42,6 +42,7 @@ async function api(method, path, body) {
   if (body) opts.body = JSON.stringify(body)
   const res = await fetch(`${BASE_URL}${path}`, opts)
   const text = await res.text()
+  if (!res.ok) process.exitCode = 1
   try {
     return JSON.parse(text)
   } catch {

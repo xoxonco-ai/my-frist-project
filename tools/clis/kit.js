@@ -49,6 +49,7 @@ async function api(method, path, body, useSecret = true) {
   }
   const res = await fetch(url.toString(), opts)
   const text = await res.text()
+  if (!res.ok) process.exitCode = 1
   try {
     return JSON.parse(text)
   } catch {
