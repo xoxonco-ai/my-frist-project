@@ -3,8 +3,26 @@ node_modules/
 
 # Skill install artifacts (npx skills add)
 .agents/
-.claude/
 skills-lock.json
+
+# .claude/ is ignored by default so `npx skills add` artifacts stay untracked.
+# The claude-code-best-practice install below is re-included explicitly.
+.claude/*
+!.claude/.gitignore
+!.claude/README.md
+!.claude/agent-memory/
+!.claude/agents/
+!.claude/commands/
+!.claude/hooks/
+!.claude/rules/
+!.claude/settings.json
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/agent-browser/
+!.claude/skills/presentation/
+!.claude/skills/time-skill/
+!.claude/skills/weather-fetcher/
+!.claude/skills/weather-svg-creator/
 
 # Environment variables / secrets
 .env
