@@ -1,5 +1,5 @@
 ---
-description: Update the SKILL COLLECTIONS table by researching all 5 skill-collection repos in parallel
+description: 【⚠️上游維護·會改寫本repo的README】 Update the SKILL COLLECTIONS table by researching all 5 skill-collection repos in parallel
 ---
 
 # Workflow — Skill Collections

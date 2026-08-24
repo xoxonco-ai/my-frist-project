@@ -1,6 +1,6 @@
 ---
 name: presentation-vibe-coding
-description: PROACTIVELY use this agent whenever the user wants to update, modify, or fix the VIBE-CODING presentation (`presentation/vibe-coding-to-agentic-engineering/index.html`) — slides, structure, styling, or level transitions. Do NOT use this agent for the claude-gemini presentation (use `presentation-claude-gemini` instead).
+description: 【⚠️上游簡報·本repo無對應檔案】 PROACTIVELY use this agent whenever the user wants to update, modify, or fix the VIBE-CODING presentation (`presentation/vibe-coding-to-agentic-engineering/index.html`) — slides, structure, styling, or level transitions. Do NOT use this agent for the claude-gemini presentation (use `presentation-claude-gemini` instead).
 allowedTools:
   - "Bash(*)"
   - "Read"

@@ -1,6 +1,6 @@
 ---
 name: vibe-to-agentic-framework
-description: The conceptual framework behind the presentation — what "Vibe Coding to Agentic Engineering" means, why the journey is structured the way it is, and how every slide fits the narrative arc
+description: 【上游簡報·理念框架】 The conceptual framework behind the presentation — what "Vibe Coding to Agentic Engineering" means, why the journey is structured the way it is, and how every slide fits the narrative arc
 ---
 
 # The "Vibe Coding to Agentic Engineering" Framework

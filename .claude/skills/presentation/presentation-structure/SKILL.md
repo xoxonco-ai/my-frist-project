@@ -1,6 +1,6 @@
 ---
 name: presentation-structure
-description: Knowledge about the presentation slide format, weight system, navigation, and section structure
+description: 【上游簡報·投影片結構】 Knowledge about the presentation slide format, weight system, navigation, and section structure
 ---
 
 # Presentation Structure Skill

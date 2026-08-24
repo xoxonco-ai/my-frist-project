@@ -1,6 +1,6 @@
 ---
 name: workflow-concepts-agent
-description: Research agent that fetches Claude Code docs and changelog, reads the local README CONCEPTS section, and analyzes drift
+description: 【上游研究·概念總表比對】 Research agent that fetches Claude Code docs and changelog, reads the local README CONCEPTS section, and analyzes drift
 model: opus
 color: green
 allowedTools:

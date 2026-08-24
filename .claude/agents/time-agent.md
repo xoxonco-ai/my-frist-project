@@ -1,6 +1,6 @@
 ---
 name: time-agent-pkt
-description: Use this agent to display the current time in Pakistan Standard Time (PKT, UTC+5). (root scope — see agent-teams for Dubai time)
+description: 【示範·時間子代理】 Use this agent to display the current time in Pakistan Standard Time (PKT, UTC+5). (root scope — see agent-teams for Dubai time)
 allowedTools:
   - "Bash(*)"
   - "Read"

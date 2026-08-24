@@ -1,6 +1,6 @@
 ---
 name: presentation-styling
-description: Knowledge about CSS classes, component patterns, and syntax highlighting in the presentation
+description: 【上游簡報·CSS 樣式】 Knowledge about CSS classes, component patterns, and syntax highlighting in the presentation
 ---
 
 # Presentation Styling Skill

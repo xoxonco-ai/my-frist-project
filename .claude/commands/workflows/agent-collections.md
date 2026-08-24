@@ -1,5 +1,5 @@
 ---
-description: Update the AGENT COLLECTIONS table by researching all agent-collection repos in parallel
+description: 【⚠️上游維護·會改寫本repo的README】 Update the AGENT COLLECTIONS table by researching all agent-collection repos in parallel
 ---
 
 # Workflow — Agent Collections

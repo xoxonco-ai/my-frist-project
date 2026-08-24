@@ -1,6 +1,6 @@
 ---
 name: time-skill
-description: Display the current time in Pakistan Standard Time (PKT, UTC+5). Use when the user asks for the current time, Pakistan time, or PKT.
+description: 【示範·巴基斯坦時間】 Display the current time in Pakistan Standard Time (PKT, UTC+5). Use when the user asks for the current time, Pakistan time, or PKT.
 user-invocable: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Track Claude Code subagents report changes and find what needs updating
+description: 【⚠️上游維護·追蹤官方subagents文件】 Track Claude Code subagents report changes and find what needs updating
 argument-hint: [number of versions to check, default 10]
 ---
 

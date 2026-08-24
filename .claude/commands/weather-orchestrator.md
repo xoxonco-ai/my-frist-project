@@ -1,5 +1,5 @@
 ---
-description: Fetch Dubai weather and create an SVG weather card
+description: 【示範·三層編排 主控】 Fetch Dubai weather and create an SVG weather card
 model: haiku
 allowed-tools:
   - AskUserQuestion
