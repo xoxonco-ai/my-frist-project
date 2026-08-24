@@ -62,6 +62,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [ai-seo](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.... |
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
 | [aso](skills/aso/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO... |
+| [brandkit](skills/brandkit/) | Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks,... |
 | [brene-brown-perspective](skills/brene-brown-perspective/) | | |
 | [churn-prevention](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or... |
 | [co-marketing](skills/co-marketing/) | When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use... |
@@ -74,12 +75,21 @@ See each skill's **Related Skills** section for the full dependency map.
 | [copywriting](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages,... |
 | [cro](skills/cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage,... |
 | [customer-research](skills/customer-research/) | When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer... |
+| [design-taste-frontend](skills/design-taste-frontend/) | Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right... |
+| [design-taste-frontend-v1](skills/design-taste-frontend-v1/) | The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is... |
 | [directory-submissions](skills/directory-submissions/) | When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for... |
 | [emails](skills/emails/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email... |
 | [estes-perspective](skills/estes-perspective/) | | |
 | [free-tools](skills/free-tools/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or... |
+| [full-output-enforcement](skills/full-output-enforcement/) | Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles... |
+| [gpt-taste](skills/gpt-taste/) | Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA... |
 | [hellinger-perspective](skills/hellinger-perspective/) | | |
+| [high-end-visual-design](skills/high-end-visual-design/) | Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and... |
 | [image](skills/image/) | When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product... |
+| [image-to-code](skills/image-to-code/) | Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design... |
+| [imagegen-frontend-mobile](skills/imagegen-frontend-mobile/) | Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS,... |
+| [imagegen-frontend-web](skills/imagegen-frontend-web/) | Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL... |
+| [industrial-brutalist-ui](skills/industrial-brutalist-ui/) | Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type... |
 | [launch](skills/launch/) | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user... |
 | [lead-magnets](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the... |
 | [levine-perspective](skills/levine-perspective/) | | |
@@ -90,6 +100,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [marketing-plan](skills/marketing-plan/) | When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use... |
 | [marketing-psychology](skills/marketing-psychology/) | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when... |
 | [mate-perspective](skills/mate-perspective/) | | |
+| [minimalist-ui](skills/minimalist-ui/) | Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No... |
 | [muapi-ad-creative](skills/muapi-ad-creative/) | Generate a high-converting ad creative set — hero image, ad copy variations, and platform-optimized crops for Meta,... |
 | [muapi-ai-clipping](skills/muapi-ai-clipping/) | Turn a long video into N viral-ready short clips with a single managed API call. Wraps muapi.ai's `/ai-clipping`... |
 | [muapi-cinema-director](skills/muapi-cinema-director/) | Direct high-fidelity cinematic video with AI — translates creative intent into technical cinematographic directives for... |
@@ -114,6 +125,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [prospecting](skills/prospecting/) | When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or... |
 | [public-relations](skills/public-relations/) | When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy... |
 | [ramana-perspective](skills/ramana-perspective/) | | |
+| [redesign-existing-projects](skills/redesign-existing-projects/) | Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and... |
 | [referrals](skills/referrals/) | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy.... |
 | [revops](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes.... |
 | [rogers-perspective](skills/rogers-perspective/) | | |
@@ -125,6 +137,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [site-architecture](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal... |
 | [sms](skills/sms/) | When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts,... |
 | [social](skills/social/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram,... |
+| [stitch-design-taste](skills/stitch-design-taste/) | Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium,... |
 | [video](skills/video/) | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use... |
 <!-- SKILLS:END -->
 
