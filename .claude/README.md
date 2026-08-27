@@ -63,6 +63,16 @@ Everything is upstream-verbatim except:
    Both families were deleted whole, so no orphaned agent or skill is left behind. Everything
    is recoverable from git history if you want any of it back.
 
+6. **`skills/weather-fetcher/SKILL.md`** — `allowed-tools` changed from a YAML list to a
+   space-delimited string. Upstream ships it as a list, which violates the Agent Skills spec
+   (`[allowed-tools-format] Allowed-tools must be a space-delimited string`) and fails this
+   repository's `validate-skill.yml`. `agent-browser` already used the string form upstream.
+
+   Note: `user-invocable` (on `weather-fetcher` and `time-skill`) is a Claude Code extension and
+   is not in the spec's recognised field set, so the validator emits an `[unknown-field]`
+   warning for it. The workflow runs with `fail-on-warning: false`, and the field is
+   functional in Claude Code, so it is left as upstream wrote it.
+
 ## Review before relying on it
 
 `settings.json` ships upstream's permission set, which allows `Edit(*)`, `Write(*)` and

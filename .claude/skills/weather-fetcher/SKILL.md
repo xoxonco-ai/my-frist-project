@@ -2,8 +2,7 @@
 name: weather-fetcher
 description: 【示範·天氣取數（子代理專用）】 Instructions for fetching current weather temperature data for Dubai, UAE from Open-Meteo API
 user-invocable: false
-allowed-tools:
-  - "WebFetch(*)"
+allowed-tools: WebFetch(*)
 ---
 
 # Weather Fetcher Skill
