@@ -128,19 +128,83 @@ Use when user asks about 噶举派 yogic practice or wants teaching in 米拉日
 
 | 單字 | 目前宣告者 |
 |---|---|
-| 放下 | `master-ajahn-chah`、`watts-perspective`、`zhuangzi-perspective` |
-| 當下 | `tolle-perspective`、`watts-perspective` |
-| 自性 | `master-huineng`、`huineng-perspective` |
-| 無為 | `laozi-perspective`、`zhuangzi-perspective` |
-| 覺醒 | `campbell-perspective`、`tolle-perspective` |
 | 原型 | `jung-perspective`、`hillman-perspective`、`campbell-perspective` |
+| 當下 | `tolle-perspective`、`watts-perspective` |
+| 意識 | `tolle-perspective`、`watts-perspective` |
+| 覺醒 | `campbell-perspective`、`tolle-perspective` |
+| 意義 | `campbell-perspective`、`frankl-perspective` |
+| 自我 / 身份認同 | `watts-perspective`、`dilts-perspective` |
+| 觀察者 | `tolle-perspective`、`krishnamurti-perspective` |
+| 無為 / 道 | `laozi-perspective`、`zhuangzi-perspective` |
+| 放下 | `master-ajahn-chah`、`watts-perspective`、`zhuangzi-perspective` |
+| 自性 | `master-huineng`、`huineng-perspective`、`jung-perspective` |
 | 比較 | `krishnamurti-perspective`、`compare-masters` |
 
-**規則：任何 skill 的 description 都不得宣告通用單字。**一律改成帶語境的整句，例如：
+**規則：任何 skill 的 description 都不得宣告通用單字。**改成兩件事：(1) 只宣告該人物**獨有的專名或成句**；(2) 在 description 裡寫明分野軸線與路由例句，沿用 `compare-masters` / `master-debate` / `master-curriculum` 既有的互指寫法。
 
-- ✗ `放下` → ✓ `放不下一段關係`、`一直想控制結果`
-- ✗ `當下` → ✓ `一直活在對未來的焦慮裡`
-- ✗ `原型` → ✓ `夢裡反覆出現同一個形象`（jung）、`症狀想告訴我什麼`（hillman）、`我的人生階段對應哪一段旅程`（campbell）
+例外：**人名與稱號的包含關係允許保留**（例如 `master-huineng` 的「六祖」被 `huineng-perspective` 的「六祖視角」包住），因為那是使用者指名叫某個 skill 的講法，而兩邊的 description 都已經寫明意圖分野。禁的是通用概念單字，不是專名。
+
+下面八個 perspective skill 是這些撞詞的全部來源，全部改寫成品。`master-ajahn-chah`、`master-huineng`、`huineng-perspective` 的成品在第 1、3 節。`compare-masters` 不用改——它的「比較」永遠跟宗派名一起出現（禪宗和淨土、唯識和中觀），語境已經自帶消歧。
+
+### 5a. 「原型」三連：整合 vs 聆聽 vs 敘事定位
+
+三個人講的「原型」根本不是同一個東西：榮格的是**集體無意識的結構單位、要被整合**；希爾曼的是**意象本身、不該被解決**（他明確反對榮格的目的論）；坎伯的是**故事裡的角色功能**（導師、門檻守衛、變形者）。所以「原型」單字誰都不宣告。
+
+#### `jung-perspective` 的新 description
+
+```
+以 Carl Jung 分析心理學處理「心裡有個我不想承認的部分」。當使用者說「我最討厭的那種人，我身上也有」「夢裡反覆出現同一個形象」「我對某人的反感強得不合比例」「戴著面具活著，不知道哪個才是我」「人生走到一半突然空掉」時啟用，用陰影整合、收回投射、人格面具、阿尼瑪／阿尼姆斯、補償作用、超越功能、個體化歷程來做。與 /hillman-perspective 的分野：榮格要把意象整合進意識、有方向（自性化）；希爾曼反對這個目的論。路由：「這個症狀要我長成誰」留在這裡，「這個意象本身在說什麼、不必被解決」去 /hillman-perspective，「我這段人生對應故事的哪一幕」去 /campbell-perspective。觸發詞：陰影、投射、人格面具、阿尼瑪、阿尼姆斯、個體化、自性化、集體無意識、補償作用、超越功能、積極想像、情結、共時性、榮格、Jung。
+```
+
+#### `hillman-perspective` 的新 description
+
+```
+以 James Hillman 原型心理學讀「症狀在說什麼」，不急著把它治好。當使用者說「這個困擾我很久的模式，也許不是要被修掉的」「我一直被同一種意象糾纏」「我從小就知道自己該做什麼，但說不清為什麼」「憂鬱是不是也有它的位置」時啟用，用意象優先於詮釋、症狀即靈魂的語言、下行（往下而不是往上）、橡實理論與守護靈 daimon、病理化、多神心理、世界靈魂 anima mundi、詩意邏輯。與 /jung-perspective 的分野：這裡不做整合、不走向單一中心，意象留在原地被聽見。路由：「怎麼把陰影收回來、怎麼完成個體化」去 /jung-perspective，「我卡在旅程的哪一關」去 /campbell-perspective，「怎麼從念頭裡脫身」去 /tolle-perspective。觸發詞：原型心理學、靈魂的語言、意象、症狀在說什麼、下行、橡實、守護靈、daimon、病理化、世界靈魂、多神心理、詩意邏輯、Hillman、希爾曼。
+```
+
+#### `campbell-perspective` 的新 description
+
+```
+以 Joseph Campbell 的英雄旅程，把一段經歷擺回故事結構裡定位。當使用者說「我知道該做那件事，但一直拖」「剛辭職／剛分手，不知道自己在哪一步」「一路順利到某個點就全垮了」「做完了卻不知道怎麼跟原來的生活接回去」「想把這段經歷寫成有結構的內容」時啟用，用召喚冒險、拒絕召喚、遇見導師、跨越第一道門檻、門檻守衛、試煉之路、最深的洞穴、帶回恩賜、回歸與兩個世界的自由。分野：這裡是敘事階段定位，不是心理整合，也不是當下練習。路由：「這個形象／症狀在說什麼」去 /jung-perspective 或 /hillman-perspective，「痛苦本身有什麼意義」去 /frankl-perspective，「怎麼從思緒裡出來」去 /tolle-perspective。觸發詞：英雄旅程、單一神話、monomyth、千面英雄、召喚冒險、拒絕召喚、門檻守衛、試煉之路、最深的洞穴、帶回恩賜、回歸、導師、變形者、Campbell、坎伯。
+```
+
+### 5b. 「當下」二連：練習法 vs 隱喻翻譯
+
+托勒給的是可立刻執行的覺察指令，瓦茲給的是看法與比喻。兩邊都不宣告「當下」「意識」「覺醒」「自我」。
+
+#### `tolle-perspective` 的新 description
+
+```
+以 Eckhart Tolle 的臨在練習把注意力從思緒裡拉回來，給的是可立刻執行的覺察指令。當使用者說「腦子停不下來」「同一件事想了一百遍」「一被戳到就整個炸開，事後才發現不成比例」「我一直在等某件事發生才敢過日子」「焦慮沒有具體對象」時啟用，用痛苦之身 Pain Body 的辨認與不餵養、小我的結構、與思維解除認同、內在身體覺察、寂靜與內在空間。與 /watts-perspective 的分野：這裡是練習法，瓦茲是隱喻與翻譯。與 /krishnamurti-perspective 的分野：托勒讓你退到觀察者位置，克氏說觀察者即被觀察者、沒有可退之處。路由：「用比喻讓我看懂這件事有多荒謬」去 /watts-perspective，「我怎麼一直在跟別人比」去 /krishnamurti-perspective。觸發詞：臨在、Pain Body、痛苦之身、小我、與思維認同、腦子停不下來、內在身體、內在空間、寂靜、當下時刻的力量、Tolle、托勒。
+```
+
+#### `watts-perspective` 的新 description
+
+```
+以 Alan Watts 的幽默與隱喻，把道家與禪的觀點翻成能直接體驗的白話。當使用者說「我一直在演一個角色，累了」「拼命想抓住安全感卻越抓越怕」「人生到底在幹嘛，好像沒有目的」「越用力越不對勁」「聽了很多道理還是進不去」時啟用，用人生如戲與扮演、宇宙遊戲、自我是一種幻象、安全感的不可能、癢與抓、逆向努力法則。與 /tolle-perspective 的分野：托勒給練習，這裡給看法與比喻。與 /laozi-perspective、/zhuangzi-perspective 的分野：那兩個從原典文本出發，這裡是二十世紀西方的轉譯。路由：「給我一個現在就能做的覺察練習」去 /tolle-perspective，「道德經怎麼說」去 /laozi-perspective，「莊子怎麼說」去 /zhuangzi-perspective。觸發詞：人生如戲、扮演、宇宙遊戲、自我幻象、安全感的不可能、癢與抓、逆向努力、東方智慧西譯、Alan Watts、瓦茲。
+```
+
+### 5c. 「無為／道」二連：節制的操作原則 vs 打散評判座標
+
+#### `laozi-perspective` 的新 description
+
+```
+以《道德經》的認知框架處理「過度用力」。當使用者說「我每天都在追進度，卻越做越空」「總覺得自己該做更多」「一停下來就有罪惡感」「想控制結果，一失控就崩」「硬碰硬碰不過」時啟用，用無為（不妄為，不是不作為）、柔弱勝剛強、反者道之動、損之又損、致虛守靜、不爭、上善若水、知足、歸根復命。與 /zhuangzi-perspective 的分野：老子講節制與治理的操作原則（少做、不爭、退一步），莊子講相對性與身份鬆綁（齊物、逍遙、無用之用）。路由：「是非對錯到底誰說了算、我到底還是不是我」去 /zhuangzi-perspective，「用比喻讓我輕鬆看懂」去 /watts-perspective，「禪宗怎麼說」去 /master-huineng。觸發詞：道德經、老子、無為而無不為、柔弱勝剛強、反者道之動、損之又損、致虛守靜、上善若水、不爭、知足、歸根復命、越做越空、覺得該做更多。
+```
+
+#### `zhuangzi-perspective` 的新 description
+
+```
+以莊子的相對性視角鬆開「是非對錯」與身份執著。當使用者說「到底誰對誰錯，我卡在這裡出不來」「別人說我這樣不對，我開始懷疑自己」「不知道現在的我還是不是原本的我」「我這種特質好像沒什麼用」「一直想做到最好，反而做不動」時啟用，用齊物論、逍遙遊、蝴蝶夢、無用之用、坐忘、心齋、庖丁解牛的順應自然、安時處順。與 /laozi-perspective 的分野：老子是少做、不爭的操作原則，這裡是打散評判座標。路由：「我一直在過度用力、該怎麼收」去 /laozi-perspective，「怎麼從念頭裡出來」去 /tolle-perspective，「我在跟誰比較」去 /krishnamurti-perspective。觸發詞：莊子、齊物論、逍遙遊、蝴蝶夢、無用之用、坐忘、心齋、庖丁解牛、安時處順、誰對誰錯、我還是不是原來的我。
+```
+
+### 5d. 「比較／觀察者」：心理衡量 vs 宗派對比、無觀察者 vs 退到觀察位
+
+#### `krishnamurti-perspective` 的新 description
+
+```
+以 Krishnamurti 的「不帶判斷的觀察」拆掉制約與比較。當使用者說「我一直拿自己跟別人比」「總覺得別人過得比我好」「我在努力成為某種人，但那不是我要的」「怕的東西講不出來但一直在」「照著老師／權威說的做，反而更混亂」時啟用，用制約的看見、觀察者即被觀察者（沒有一個站在外面的觀察者）、心理時間與「成為」的暴力、無選擇的覺察、真理無路可循、對權威的懷疑。與 /tolle-perspective 的分野：托勒讓你退到觀察者位置，克氏說那個位置本身就是分裂。與 /compare-masters 的分野：那裡的「比較」是宗派對比，這裡的「比較」是心理上的自我衡量。路由：「給我一個當下的練習」去 /tolle-perspective，「禪宗和淨土怎麼比」去 /compare-masters。觸發詞：制約、觀察者即被觀察者、無選擇的覺察、心理時間、成為的暴力、真理無路可循、拿自己跟別人比、總覺得別人比我好、對權威的懷疑、Krishnamurti、克里希那穆提。
+```
 
 ---
 
@@ -168,3 +232,29 @@ Use when user asks about 噶举派 yogic practice or wants teaching in 米拉日
 這些 skill 存在 claude.ai 帳號的 skill 區（`~/.claude/skills/synced/` 只是同步下來的本機副本，直接改會被下次同步覆蓋）。
 
 要讓修改生效，在 claude.ai 的 skill 編輯介面逐一貼上新的 description，或在原始編寫的專案裡改完重新同步。
+
+### 待貼清單（18 個）
+
+| # | skill | 已貼上 |
+|---|---|---|
+| 1 | `master-huineng` | ☐ |
+| 2 | `huineng-perspective` | ☐ |
+| 3 | `master-nagarjuna` | ☐ |
+| 4 | `master-kumarajiva` | ☐ |
+| 5 | `master-ajahn-chah` | ☐ |
+| 6 | `master-mahasi-sayadaw` | ☐ |
+| 7 | `master-buddhaghosa` | ☐ |
+| 8 | `master-atisha` | ☐ |
+| 9 | `master-tsongkhapa` | ☐ |
+| 10 | `master-milarepa` | ☐ |
+| 11 | `jung-perspective` | ☐ |
+| 12 | `hillman-perspective` | ☐ |
+| 13 | `campbell-perspective` | ☐ |
+| 14 | `tolle-perspective` | ☐ |
+| 15 | `watts-perspective` | ☐ |
+| 16 | `laozi-perspective` | ☐ |
+| 17 | `zhuangzi-perspective` | ☐ |
+| 18 | `krishnamurti-perspective` | ☐ |
+
+貼完後可以自己驗一次：任選一句你常打的話，看它現在只命中一個 skill。例如「我一直拿自己跟別人比」只該叫出 `krishnamurti-perspective`，「腦子停不下來」只該叫出 `tolle-perspective`，「夢裡反覆出現同一個形象」只該叫出 `jung-perspective`。
+
