@@ -6,7 +6,7 @@ This directory is an install of [shanraisshan/claude-code-best-practice](https:/
 |---|---|
 | Upstream | `https://github.com/shanraisshan/claude-code-best-practice.git` |
 | Commit | `20d8f78bdc18f7a637bbb3f3902f1c1e3a3b8563` (2026-08-24) |
-| Scope | full `.claude/` tree + root `.mcp.json` |
+| Scope | `.claude/` tree + root `.mcp.json`, trimmed to what applies to this repo |
 | License | MIT (upstream) |
 
 ## What's here
@@ -15,10 +15,10 @@ This directory is an install of [shanraisshan/claude-code-best-practice](https:/
 |---|---|
 | `settings.json` | Permissions, hooks wiring, status line, output style, `plansDirectory`, env |
 | `hooks/` | Cross-platform sound-notification system (`scripts/hooks.py`, 30 hook events, `sounds/`) |
-| `agents/` | Subagents: `weather-agent`, `time-agent`, presentation agents, workflow research agents |
-| `commands/` | Slash commands, incl. `/weather-orchestrator` and the `workflows:*` research commands |
-| `skills/` | `weather-fetcher`, `weather-svg-creator`, `time-skill`, `agent-browser`, `presentation/*` |
-| `rules/` | Path-scoped memory rules (`markdown-docs.md`, `presentation.md`) |
+| `agents/` | Subagents: `weather-agent`, `time-agent` |
+| `commands/` | `/weather-orchestrator`, `/time-command` |
+| `skills/` | `weather-fetcher`, `weather-svg-creator`, `time-skill`, `agent-browser` |
+| `rules/` | Path-scoped memory rule (`markdown-docs.md`) |
 | `agent-memory/` | Upstream demo of the auto-memory feature (`weather-agent`) |
 | `../.mcp.json` | Project MCP servers: `playwright`, `context7`, `deepwiki` (via `npx`) |
 
@@ -47,9 +47,21 @@ Everything is upstream-verbatim except:
    while `npx`-installed skills under `.claude/skills/` stay ignored. Adding a new tracked
    skill here means adding a matching `!.claude/skills/<name>/` line.
 
-`rules/presentation.md` is scoped to `presentation/**`, which does not exist here, so it stays
-dormant. The `presentation-*` agents and skills are upstream demo material and are safe to
-delete if you don't want them in the `/` menu.
+4. **Chinese labels** — every `description` is prefixed with a bracketed Chinese label so the
+   `/` menu and skill picker are scannable. `name` fields are untouched (the spec requires
+   lowercase ASCII matching the directory, and `validate-skill.yml` enforces it).
+5. **Trimmed 21 upstream-only files.** Two complete families were removed because nothing in
+   this repository uses them, and one of them was actively dangerous:
+
+   - **presentation family (7)** — `rules/presentation.md` routed to three `presentation-*`
+     agents, which in turn used three `presentation/*` skills. All of them target
+     `presentation/**` HTML decks that live only in the upstream repo.
+   - **workflows family (14)** — eight `workflows:*` commands plus the six research agents they
+     call. Four of those commands rewrite the upstream repo's `README.md` tables; run here they
+     would overwrite this repository's own README.
+
+   Both families were deleted whole, so no orphaned agent or skill is left behind. Everything
+   is recoverable from git history if you want any of it back.
 
 ## Review before relying on it
 
@@ -64,4 +76,5 @@ git clone --depth 1 https://github.com/shanraisshan/claude-code-best-practice.gi
 diff -ru .claude /tmp/ccbp/.claude
 ```
 
-Re-apply the three local adaptations above after any sync.
+Re-apply the local adaptations above after any sync — including the trim, or the two removed
+families will come back.
