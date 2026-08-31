@@ -2,6 +2,9 @@
 
 This directory is an install of [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice).
 
+> 📘 **繁體中文操作手冊：[`USAGE.zh-TW.md`](USAGE.zh-TW.md)** — 名詞中文對照、完整指令表、
+> 每個設定在做什麼、以及照抄這套架構寫自己工作流的三步驟範本。
+
 | | |
 |---|---|
 | Upstream | `https://github.com/shanraisshan/claude-code-best-practice.git` |
