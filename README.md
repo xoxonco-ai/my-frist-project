@@ -62,7 +62,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [ai-seo](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.... |
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
 | [aso](skills/aso/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO... |
-| [awesome-python](skills/awesome-python/) | When the user needs to choose a Python library, framework, or tool for a task — or wants to know what the current best-in-class option is. Covers 484 curated... |
+| [awesome-python](skills/awesome-python/) | When the user needs to choose a Python library, framework, or tool for a task — or wants to know what the current... |
 | [brandkit](skills/brandkit/) | Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks,... |
 | [brene-brown-perspective](skills/brene-brown-perspective/) | | |
 | [churn-prevention](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or... |
