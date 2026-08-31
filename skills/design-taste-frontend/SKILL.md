@@ -1,6 +1,6 @@
 ---
 name: design-taste-frontend
-description: Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.
+description: 【質感前端設計 v2】Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check. 中文觸發詞：做首頁、landing page、作品集、行銷頁、官網改版、網站要有質感、不要像模板、不要 AI 味、前端設計、版面設計。
 license: MIT
 metadata:
   author: Leonxlnx

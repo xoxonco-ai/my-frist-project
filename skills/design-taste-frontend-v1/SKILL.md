@@ -1,6 +1,6 @@
 ---
 name: design-taste-frontend-v1
-description: The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2 experimental), which is a substantial rewrite. Use this v1 install name only if you need exact backward compatibility.
+description: 【質感前端設計 v1（舊版）】The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2 experimental), which is a substantial rewrite. Use this v1 install name only if you need exact backward compatibility. 中文觸發詞：質感前端舊版、taste skill v1、v2 怪怪的想用回舊版、要跟之前一樣的行為。
 license: MIT
 metadata:
   author: Leonxlnx
