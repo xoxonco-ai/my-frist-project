@@ -1,0 +1,25 @@
+# 知識庫四層架構
+
+這個資料夾定義一套讓 AI 能穩定使用公司/專案知識的四層架構。四層由下往上疊加：
+
+1. [data/](data/README.md) 資料層 — AI 能讀什麼
+2. [index/](index/README.md) 索引層 — AI 怎麼找到資料
+3. [rules/](rules/README.md) 規則層 — AI 要照什麼規矩輸出
+4. [workflow/](workflow/README.md) 工作流層 — 把前三層接進真實任務
+
+## 使用順序
+
+先把資料層清乾淨，再建索引，再定規則，最後才接工作流。不要跳著做——沒有乾淨資料，索引和規則都是空談。
+
+## 驗收標準（跑通標誌）
+
+工作流層任務執行後，用以下三點檢查是否真的跑通：
+
+- [ ] 能找到資料
+- [ ] 能標注來源
+- [ ] 改動量變少（不用每次大幅修改 AI 的輸出）
+
+## 與本repo其他內容的關係
+
+- product-marketing skill 產出的 [.agents/product-marketing.md](../.agents/product-marketing.md) 可以當作資料層裡「公司/產品定位」這一類的種子資料，不必重複建立。
+- [skills/ai-seo/references/okf.md](../skills/ai-seo/references/okf.md) 說明的 Open Knowledge Format（分散式 markdown + index 的知識包格式）是索引層 LLM Wiki 做法的一個參考範例，用途是給外部 AI 搜尋引擎引用，跟這裡的內部索引層是不同場景，兩者不衝突。
