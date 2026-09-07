@@ -94,6 +94,7 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | wistia | Video | ✓ | - | [✓](clis/wistia.js) | - | [wistia.md](integrations/wistia.md) |
 | heygen | Video | ✓ | ✓ | - | ✓ | [heygen.md](integrations/heygen.md) |
 | hyperframes | Video | - | - | ✓ | ✓ | [hyperframes.md](integrations/hyperframes.md) |
+| muapi | Image & Video | ✓ | - | [✓](clis/muapi.js) | - | [muapi.md](integrations/muapi.md) |
 | trustpilot | Reviews | ✓ | - | [✓](clis/trustpilot.js) | - | [trustpilot.md](integrations/trustpilot.md) |
 | g2 | Reviews | ✓ | - | [✓](clis/g2.js) | - | [g2.md](integrations/g2.md) |
 | onesignal | Push | ✓ | - | [✓](clis/onesignal.js) | ✓ | [onesignal.md](integrations/onesignal.md) |
@@ -301,8 +302,9 @@ Video hosting, creation, and AI generation.
 | **wistia** | Video hosting, marketing analytics | Best for marketing video hosting |
 | **heygen** | AI avatars, talking-head videos | MCP server available |
 | **hyperframes** | Programmatic video from HTML/CSS | Open source, agent-native |
+| **muapi** | AI image & video generation (200+ models) | CLI; engine behind Open Generative AI |
 
-**Agent recommendation**: HeyGen for AI avatar videos (MCP-enabled). Hyperframes for templated, data-driven video from code. Wistia for hosting and analytics.
+**Agent recommendation**: HeyGen for AI avatar videos (MCP-enabled). Hyperframes for templated, data-driven video from code. Wistia for hosting and analytics. MuAPI for text/image→image and text/image→video across 200+ models (Flux, Nano Banana, Kling, Seedance, Veo).
 
 ### Data Enrichment
 
