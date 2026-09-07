@@ -1,36 +1,53 @@
-# 浮生矩陣 social-cards 品牌包（雙主題）
+# 浮生羅盤 · 發文卡品牌包（官方黑金・v5）
 
-給 [social-cards-engine](https://github.com/DennisWei9898/social-cards-engine) 用的品牌插件。
-**兩個主題，依房間分流**：黑金（洞察/覺醒）＋ 溫柔（陪伴/療癒）。都已修掉原本的模糊殘影。
+浮生羅盤對外 IG 發文卡的渲染工具與規格。**統一黑金風格**，用「每房間對應底圖」（ROOM_BG）做區隔——
+不再分黑金／溫柔兩套主題。把每天發文包的文字，疊到品牌黑金底圖上出圖。
 
-> 📌 **下次要出圖看這裡 → [USAGE.md](USAGE.md)**（兩條路：這個網頁 / 你 Mac，含確切指令）
+> 📌 **下次要出圖看這裡 → [USAGE.md](USAGE.md)**（含確切指令與流程）
+> 🎨 視覺規格全文 → [`浮生矩陣-黑金/brand.md`](浮生矩陣-黑金/brand.md)
 
-## 兩個 pack
+## 出什麼
 
-| pack | 風格 | 用在哪些房間 |
-|------|------|--------------|
-| [`浮生矩陣-黑金/`](浮生矩陣-黑金/brand.md) | 近黑底・燙金・明體，貴氣有力量 | 見幻筆記・浮生解碼・登出指南 |
-| [`浮生矩陣-溫柔/`](浮生矩陣-溫柔/brand.md) | 奶油底・鼠尾草綠・黑體，留白療癒 | 木雕哲學・回家 |
+| 類型 | 尺寸 | 張數 | 範本腳本 |
+|------|------|------|----------|
+| IG 輪播卡 | 1080×1350（4:5） | 7 張（封面+5內文+練習卡） | [`render_carousel.py`](render_carousel.py) |
+| IG 限動互動 | 1080×1920（9:16） | 2 張（投票+問答） | [`render_story.py`](render_story.py) |
 
-房間→主題對照見 [`room_theme_map.csv`](room_theme_map.csv)（提案，可改）。
+## 品牌規格（官方黑金）
 
-## 直接出圖（本環境已可跑）
+- 字色：`GOLD=#E4C77E`（主燙金）/ `GOLD_HI=#F5E4AC`（強調關鍵詞）
+- 字體：`'WenQuanYi Zen Hei','PingFang TC',sans-serif`（系統**黑體**，非明體；網路字型會被 proxy 擋）
+- 暗角：**中央** radial-gradient，字全部置中
+- 底圖：`bg/bg1.png~bg9.png`（官方 9 張黑金背景，tagline 已烘進底圖）
+- 房間→底圖對應（ROOM_BG）見 [`room_theme_map.csv`](room_theme_map.csv)
+
+## 內容來源
+
+| 出什麼 | 讀哪個檔 |
+|--------|----------|
+| 輪播 7 張 | 各天發文包 `2_1230_IG輪播貼文` 的【輪播 7 張說明】 |
+| 限動 2 張 | 各天發文包 `4_1700_IG限動互動`（限動1=投票/問答、限動2） |
+
+發文包位置（Drive）：`01_浮生羅盤_90天信任品牌IP/03_發文包_週產出/浮生羅盤_發文包_WX/DXX_.../`
+
+## 快速出圖
 
 ```bash
-python render_preview.py     # 兩主題各出 D01 樣卡到 out/
+# 1. 複製範本，改 DAYS 字典（每天內容）
+# 2. 底圖放進 bg/（官方 9 張黑金底圖，大檔不進 git）
+python3 render_carousel.py     # 輪播 → out/
+python3 render_story.py        # 限動 → out_story/
+# 3. PNG 通常 1-2MB，用 Pillow 轉 JPEG(88) 縮小 → 一天一包 zip → 交付使用者拖進 Drive
 ```
-`render_preview.py` 已內建兩主題色票、字體（黑金=明體 Noto Serif TC / 溫柔=黑體）、
-房間路由，以及乾淨版型（**無模糊殘影層**）。
 
-## 裝進 social-cards-engine
+Chrome headless 路徑：`/opt/pw-browsers/chromium-1194/chrome-linux/chrome`（本環境 Playwright 預裝；勿跑 `playwright install`）。
 
-```bash
-cp -r 浮生矩陣-黑金 浮生矩陣-溫柔 <social-cards-engine>/brands/
-```
-之後在 Claude Code 說：
-> 用 social-cards 做圖卡，房間是「浮生解碼」（→自動走黑金），讀 D03 的輪播檔，做 7 張，第 7 張 CTA 關鍵字「金錢劇本」。
+## 出圖前必檢
 
-## 設計重點
-- **色票**取自真實素材（黑金＝你實際圖卡；溫柔＝療癒替代版），非憑感覺。
-- **封面/CTA** 對齊 social-post 的 sends>saves>likes；關鍵字回扣**模組 5** 自動私訊。
-- **anti-hype 硬邊界**寫進兩包，碰到恐嚇/神化/顯化由 carousel-joker 擋下。
+- 輪播**第 7 張 CTA 關鍵字**要和 [模組 5 `keyword_map.csv`](../modules/5-auto-reply/keyword_map.csv) 一致，留言的人才收得到自動私訊。
+- 內容守 **anti-hype 硬邊界**：不恐嚇／不神化／不顯化／不療效宣稱。
+
+## 備註
+
+- `浮生矩陣-溫柔/` 是舊的雙主題方案，官方已改統一黑金＋每房間底圖，**溫柔版保留備查、非現行**。
+- 底圖大檔不進 git；換環境時重新放 `bg/`。
