@@ -62,6 +62,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [ai-seo](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.... |
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
 | [aso](skills/aso/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO... |
+| [attribution](skills/attribution/) | When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an... |
 | [awesome-python](skills/awesome-python/) | When the user needs to choose a Python library, framework, or tool for a task — or wants to know what the current... |
 | [brandkit](skills/brandkit/) | 【品牌識別設計稿（只出圖）】Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems,... |
 | [brene-brown-perspective](skills/brene-brown-perspective/) | | |
@@ -81,6 +82,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [directory-submissions](skills/directory-submissions/) | When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for... |
 | [emails](skills/emails/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email... |
 | [estes-perspective](skills/estes-perspective/) | | |
+| [events](skills/events/) | When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows,... |
 | [free-tools](skills/free-tools/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or... |
 | [full-output-enforcement](skills/full-output-enforcement/) | 【完整輸出強制（防偷懶）】Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns,... |
 | [gpt-taste](skills/gpt-taste/) | 【質感前端設計 GPT／Codex 版】Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout... |
@@ -92,6 +94,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [imagegen-frontend-mobile](skills/imagegen-frontend-mobile/) | 【App 畫面設計稿生成（只出圖）】Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows.... |
 | [imagegen-frontend-web](skills/imagegen-frontend-web/) | 【網頁設計稿生成（只出圖）】Elite frontend image-direction skill for generating premium, conversion-aware website design references.... |
 | [industrial-brutalist-ui](skills/industrial-brutalist-ui/) | 【工業粗獷風介面】Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids,... |
+| [influencer-marketing](skills/influencer-marketing/) | When the user wants to run influencer, creator, or ambassador partnerships to promote their product — finding and... |
 | [launch](skills/launch/) | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user... |
 | [lead-magnets](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the... |
 | [levine-perspective](skills/levine-perspective/) | | |
