@@ -1,0 +1,64 @@
+name: Cleanup stale branches (one-off)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete listed stale branches
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Explicit allowlist only — every PR for these branches was
+            // merged or closed on 2026-09-14. main and the branch of the
+            // still-open PR #32 (claude/vertical-shorts-subtitles-9kxv6l)
+            // are intentionally NOT listed.
+            const branches = [
+              'claude/awesome-python-install-50kxwv',
+              'claude/baidupcs-go-0q7z5p',
+              'claude/claude-video-install-r0luuu',
+              'claude/clever-mccarthy-rgynz3',
+              'claude/fable-method-install-7w1rj9',
+              'claude/file-conflict-check-imax32',
+              'claude/generative-media-skills-install-39gdti',
+              'claude/gstack-install-5d1o47',
+              'claude/install-rm1te8',
+              'claude/jolly-bohr-h74mjp',
+              'claude/knowledge-base-install-rxx4ms',
+              'claude/livetalking-install-x6ilpc',
+              'claude/local-drive-sync-ra31v8',
+              'claude/marketing-skills-repo-l1mpgk',
+              'claude/open-generative-ai-install-qni8bw',
+              'claude/openmontage-install-lia4cs',
+              'claude/pixelle-video-install-q5hbcu',
+              'claude/session-inquiry-oe0lwq',
+              'claude/skill-installation-review-t81odn',
+              'claude/skill-list-dedup-blrhsl',
+              'claude/skills-matching-cq2m6w',
+              'claude/taste-skill-install-4hfi79',
+              'claude/therapeutic-perspective-skills-16leps',
+              'claude/workflow-installed-skills-94f0bl',
+              'claude/writing-conversation-setup-obeuat',
+            ];
+            let ok = 0, failed = 0;
+            for (const b of branches) {
+              try {
+                await github.rest.git.deleteRef({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: `heads/${b}`,
+                });
+                core.info(`deleted: ${b}`);
+                ok++;
+              } catch (e) {
+                core.warning(`failed: ${b} — ${e.message}`);
+                failed++;
+              }
+            }
+            core.notice(`Deleted ${ok}/${branches.length} branches (${failed} failed).`);
+            if (failed > 0) core.setFailed(`${failed} branch deletions failed`);
