@@ -86,6 +86,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [gpt-taste](skills/gpt-taste/) | 【質感前端設計 GPT／Codex 版】Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout... |
 | [hellinger-perspective](skills/hellinger-perspective/) | | |
 | [high-end-visual-design](skills/high-end-visual-design/) | 【高級感視覺設計】Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures,... |
+| [huashu-nuwa](skills/huashu-nuwa/) | | |
 | [image](skills/image/) | When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product... |
 | [image-to-code](skills/image-to-code/) | 【設計圖轉程式碼】Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the... |
 | [imagegen-frontend-mobile](skills/imagegen-frontend-mobile/) | 【App 畫面設計稿生成（只出圖）】Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows.... |
@@ -140,6 +141,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [social](skills/social/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram,... |
 | [stitch-design-taste](skills/stitch-design-taste/) | 【Google Stitch 設計規範】Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that... |
 | [video](skills/video/) | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use... |
+| [watch](skills/watch/) | Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript... |
 <!-- SKILLS:END -->
 
 ## Installation
