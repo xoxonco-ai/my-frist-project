@@ -10,6 +10,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | analytics | 2.0.1 | 2026-07-22 |
 | aso | 2.0.1 | 2026-08-19 |
 | attribution | 1.1.0 | 2026-07-23 |
+| awesome-python | 1.0.0 | 2026-08-31 |
 | churn-prevention | 2.0.0 | 2026-05-05 |
 | co-marketing | 2.0.0 | 2026-05-05 |
 | cold-email | 2.0.0 | 2026-05-05 |
