@@ -1,6 +1,6 @@
 ---
 name: high-end-visual-design
-description: Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.
+description: 【高級感視覺設計】Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic. 中文觸發詞：要高級、要貴氣、質感、留白、精品感、Apple 風、Linear 風、細膩動效、不要廉價感。
 license: MIT
 metadata:
   author: Leonxlnx

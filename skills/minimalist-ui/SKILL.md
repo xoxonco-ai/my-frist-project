@@ -1,6 +1,6 @@
 ---
 name: minimalist-ui
-description: Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.
+description: 【極簡編輯風介面】Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows. 中文觸發詞：極簡、乾淨、Notion 風、Linear 風、單色系、編輯感、不要漸層、不要陰影。
 license: MIT
 metadata:
   author: Leonxlnx

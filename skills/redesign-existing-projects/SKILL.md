@@ -1,6 +1,6 @@
 ---
 name: redesign-existing-projects
-description: Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.
+description: 【舊網站改版稽核】Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS. 中文觸發詞：改版、重新設計、舊站升級、這個頁面很醜、稽核現有網站、UI 有問題、看起來很 AI、不要改壞功能。
 license: MIT
 metadata:
   author: Leonxlnx

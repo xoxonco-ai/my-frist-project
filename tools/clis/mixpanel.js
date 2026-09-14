@@ -28,6 +28,7 @@ async function ingestApi(method, path, body) {
     body: body ? JSON.stringify(body) : undefined,
   })
   const text = await res.text()
+  if (!res.ok) process.exitCode = 1
   try {
     return JSON.parse(text)
   } catch {
@@ -53,6 +54,7 @@ async function queryApi(method, baseUrl, path, params) {
     headers,
   })
   const text = await res.text()
+  if (!res.ok) process.exitCode = 1
   try {
     return JSON.parse(text)
   } catch {
@@ -78,6 +80,7 @@ async function queryApiPost(path, body) {
     body: JSON.stringify(body),
   })
   const text = await res.text()
+  if (!res.ok) process.exitCode = 1
   try {
     return JSON.parse(text)
   } catch {
@@ -86,13 +89,27 @@ async function queryApiPost(path, body) {
 }
 
 function parseArgs(args) {
+  const BOOLEAN_FLAGS = new Set(['dry-run'])
   const result = { _: [] }
   for (let i = 0; i < args.length; i++) {
     const arg = args[i]
     if (arg.startsWith('--')) {
-      const key = arg.slice(2)
+      const body = arg.slice(2)
+      // Bare "--" is the end-of-options delimiter: the rest are positional.
+      if (body === '') {
+        result._.push(...args.slice(i + 1))
+        break
+      }
+      const eq = body.indexOf('=')
+      if (eq !== -1) {
+        const key = body.slice(0, eq)
+        const val = body.slice(eq + 1)
+        result[key] = BOOLEAN_FLAGS.has(key) ? (val === 'true' || val === '1') : val
+        continue
+      }
+      const key = body
       const next = args[i + 1]
-      if (next && !next.startsWith('--')) {
+      if (!BOOLEAN_FLAGS.has(key) && next !== undefined && !next.startsWith('--')) {
         result[key] = next
         i++
       } else {

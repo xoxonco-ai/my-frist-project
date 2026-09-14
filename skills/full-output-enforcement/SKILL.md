@@ -1,6 +1,6 @@
 ---
 name: full-output-enforcement
-description: Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.
+description: 【完整輸出強制（防偷懶）】Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output. 中文觸發詞：不要省略、不要用註解帶過、給我完整檔案、程式碼被截斷、AI 偷懶、輸出不完整、全部寫出來。
 license: MIT
 metadata:
   author: Leonxlnx
