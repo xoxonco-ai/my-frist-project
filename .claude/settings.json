@@ -478,10 +478,17 @@
         "source": "github",
         "repo": "JimLiu/baoyu-skills"
       }
+    },
+    "hyperframes": {
+      "source": {
+        "source": "github",
+        "repo": "heygen-com/hyperframes"
+      }
     }
   },
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": true,
-    "baoyu-skills@baoyu-skills": true
+    "baoyu-skills@baoyu-skills": true,
+    "hyperframes@hyperframes": true
   }
 }
