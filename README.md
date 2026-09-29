@@ -61,40 +61,56 @@ See each skill's **Related Skills** section for the full dependency map.
 | [ads](skills/ads/) | When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X,... |
 | [ai-seo](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.... |
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
+| [api-and-interface-design](skills/api-and-interface-design/) | Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when... |
 | [aso](skills/aso/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO... |
 | [attribution](skills/attribution/) | When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an... |
 | [awesome-python](skills/awesome-python/) | When the user needs to choose a Python library, framework, or tool for a task — or wants to know what the current... |
 | [brandkit](skills/brandkit/) | 【品牌識別設計稿（只出圖）】Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems,... |
 | [brene-brown-perspective](skills/brene-brown-perspective/) | | |
+| [browser-testing-with-devtools](skills/browser-testing-with-devtools/) | Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use... |
 | [churn-prevention](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or... |
+| [ci-cd-and-automation](skills/ci-cd-and-automation/) | Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to... |
 | [co-marketing](skills/co-marketing/) | When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use... |
+| [code-review-and-quality](skills/code-review-and-quality/) | Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another... |
+| [code-simplification](skills/code-simplification/) | Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but... |
 | [cold-email](skills/cold-email/) | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails,... |
 | [community-marketing](skills/community-marketing/) | Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a... |
 | [competitor-profiling](skills/competitor-profiling/) | When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions... |
 | [competitors](skills/competitors/) | When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when... |
+| [constraint-driven-development](skills/constraint-driven-development/) | Establishes a project's quality bar as a written contract and stops agents quietly lowering it. Interviews the user on... |
 | [content-strategy](skills/content-strategy/) | When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also... |
+| [context-engineering](skills/context-engineering/) | Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching... |
 | [copy-editing](skills/copy-editing/) | When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the... |
 | [copywriting](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages,... |
 | [cro](skills/cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage,... |
 | [customer-research](skills/customer-research/) | When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer... |
+| [debugging-and-error-recovery](skills/debugging-and-error-recovery/) | Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke,... |
+| [deprecation-and-migration](skills/deprecation-and-migration/) | Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one... |
 | [design-taste-frontend](skills/design-taste-frontend/) | 【質感前端設計 v2】Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the... |
 | [design-taste-frontend-v1](skills/design-taste-frontend-v1/) | 【質感前端設計 v1（舊版）】The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default... |
 | [directory-submissions](skills/directory-submissions/) | When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for... |
+| [documentation-and-adrs](skills/documentation-and-adrs/) | Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning... |
+| [doubt-driven-development](skills/doubt-driven-development/) | Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when you want every... |
 | [emails](skills/emails/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email... |
 | [estes-perspective](skills/estes-perspective/) | | |
 | [events](skills/events/) | When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows,... |
 | [free-tools](skills/free-tools/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or... |
+| [frontend-ui-engineering](skills/frontend-ui-engineering/) | Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages,... |
 | [full-output-enforcement](skills/full-output-enforcement/) | 【完整輸出強制（防偷懶）】Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns,... |
+| [git-workflow-and-versioning](skills/git-workflow-and-versioning/) | Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving... |
 | [gpt-taste](skills/gpt-taste/) | 【質感前端設計 GPT／Codex 版】Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout... |
 | [hellinger-perspective](skills/hellinger-perspective/) | | |
 | [high-end-visual-design](skills/high-end-visual-design/) | 【高級感視覺設計】Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures,... |
 | [huashu-nuwa](skills/huashu-nuwa/) | | |
+| [idea-refine](skills/idea-refine/) | Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an... |
 | [image](skills/image/) | When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product... |
 | [image-to-code](skills/image-to-code/) | 【設計圖轉程式碼】Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the... |
 | [imagegen-frontend-mobile](skills/imagegen-frontend-mobile/) | 【App 畫面設計稿生成（只出圖）】Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows.... |
 | [imagegen-frontend-web](skills/imagegen-frontend-web/) | 【網頁設計稿生成（只出圖）】Elite frontend image-direction skill for generating premium, conversion-aware website design references.... |
+| [incremental-implementation](skills/incremental-implementation/) | Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches... |
 | [industrial-brutalist-ui](skills/industrial-brutalist-ui/) | 【工業粗獷風介面】Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids,... |
 | [influencer-marketing](skills/influencer-marketing/) | When the user wants to run influencer, creator, or ambassador partnerships to promote their product — finding and... |
+| [interview-me](skills/interview-me/) | Extracts what the user actually wants instead of what they think they should want. Achieves this through... |
 | [launch](skills/launch/) | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user... |
 | [lead-magnets](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the... |
 | [levine-perspective](skills/levine-perspective/) | | |
@@ -119,10 +135,13 @@ See each skill's **Related Skills** section for the full dependency map.
 | [muapi-ui-design](skills/muapi-ui-design/) | Generate high-fidelity UI/UX mockups for mobile and web apps using Atomic Design principles — creates wireframes and... |
 | [muapi-youtube-shorts](skills/muapi-youtube-shorts/) | Auto-generate viral 9:16 YouTube Shorts (or TikTok / Reels clips) from a long-form video. Thin platform-aware wrapper... |
 | [muapi-youtube-thumbnail](skills/muapi-youtube-thumbnail/) | Design a high-CTR YouTube thumbnail — striking imagery, bold text placement, and emotional face/subject if needed. |
+| [observability-and-instrumentation](skills/observability-and-instrumentation/) | Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or... |
 | [offers](skills/offers/) | When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing,... |
 | [onboarding](skills/onboarding/) | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also... |
 | [paywalls](skills/paywalls/) | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use... |
 | [pema-perspective](skills/pema-perspective/) | | |
+| [performance-optimization](skills/performance-optimization/) | Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements... |
+| [planning-and-task-breakdown](skills/planning-and-task-breakdown/) | Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into... |
 | [popups](skills/popups/) | When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also... |
 | [pricing](skills/pricing/) | When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions... |
 | [product-marketing](skills/product-marketing/) | When the user wants to create or update their product marketing context document. Also use when the user mentions... |
@@ -137,12 +156,18 @@ See each skill's **Related Skills** section for the full dependency map.
 | [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also... |
 | [satir-perspective](skills/satir-perspective/) | | |
 | [schema](skills/schema/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user... |
+| [security-and-hardening](skills/security-and-hardening/) | Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input,... |
 | [seo-audit](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO... |
+| [shipping-and-launch](skills/shipping-and-launch/) | Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place... |
 | [signup](skills/signup/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the... |
 | [site-architecture](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal... |
 | [sms](skills/sms/) | When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts,... |
 | [social](skills/social/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram,... |
+| [source-driven-development](skills/source-driven-development/) | Grounds every implementation decision in official documentation. Use when you want to verify an approach against the... |
+| [spec-driven-development](skills/spec-driven-development/) | Creates specs before coding. Use when starting a new project, feature, or significant change and no specification... |
 | [stitch-design-taste](skills/stitch-design-taste/) | 【Google Stitch 設計規範】Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that... |
+| [test-driven-development](skills/test-driven-development/) | Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or... |
+| [using-agent-skills](skills/using-agent-skills/) | Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow... |
 | [video](skills/video/) | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use... |
 | [watch](skills/watch/) | Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript... |
 <!-- SKILLS:END -->
