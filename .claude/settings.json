@@ -484,11 +484,18 @@
         "source": "github",
         "repo": "heygen-com/hyperframes"
       }
+    },
+    "antv-infographic": {
+      "source": {
+        "source": "github",
+        "repo": "antvis/Infographic"
+      }
     }
   },
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": true,
     "baoyu-skills@baoyu-skills": true,
-    "hyperframes@hyperframes": true
+    "hyperframes@hyperframes": true,
+    "antv-infographic-skills@antv-infographic": true
   }
 }
