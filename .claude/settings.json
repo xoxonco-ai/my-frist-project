@@ -472,9 +472,16 @@
         "source": "github",
         "repo": "obra/superpowers-marketplace"
       }
+    },
+    "baoyu-skills": {
+      "source": {
+        "source": "github",
+        "repo": "JimLiu/baoyu-skills"
+      }
     }
   },
   "enabledPlugins": {
-    "superpowers@superpowers-marketplace": true
+    "superpowers@superpowers-marketplace": true,
+    "baoyu-skills@baoyu-skills": true
   }
 }
