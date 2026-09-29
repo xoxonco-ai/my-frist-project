@@ -479,6 +479,12 @@
         "repo": "JimLiu/baoyu-skills"
       }
     },
+    "hyperframes": {
+      "source": {
+        "source": "github",
+        "repo": "heygen-com/hyperframes"
+      }
+    },
     "antv-infographic": {
       "source": {
         "source": "github",
@@ -489,6 +495,7 @@
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": true,
     "baoyu-skills@baoyu-skills": true,
+    "hyperframes@hyperframes": true,
     "antv-infographic-skills@antv-infographic": true
   }
 }
