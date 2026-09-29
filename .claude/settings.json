@@ -478,10 +478,17 @@
         "source": "github",
         "repo": "JimLiu/baoyu-skills"
       }
+    },
+    "antv-infographic": {
+      "source": {
+        "source": "github",
+        "repo": "antvis/Infographic"
+      }
     }
   },
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": true,
-    "baoyu-skills@baoyu-skills": true
+    "baoyu-skills@baoyu-skills": true,
+    "antv-infographic-skills@antv-infographic": true
   }
 }
