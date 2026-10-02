@@ -490,12 +490,19 @@
         "source": "github",
         "repo": "antvis/Infographic"
       }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
     }
   },
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": true,
     "baoyu-skills@baoyu-skills": true,
     "hyperframes@hyperframes": true,
-    "antv-infographic-skills@antv-infographic": true
+    "antv-infographic-skills@antv-infographic": true,
+    "caveman@caveman": true
   }
 }
