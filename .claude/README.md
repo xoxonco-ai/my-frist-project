@@ -18,8 +18,8 @@ This directory is an install of [shanraisshan/claude-code-best-practice](https:/
 |---|---|
 | `settings.json` | Permissions, hooks wiring, status line, output style, `plansDirectory`, env |
 | `hooks/` | Cross-platform sound-notification system (`scripts/hooks.py`, 30 hook events, `sounds/`) |
-| `agents/` | Subagents: `weather-agent`, `time-agent` |
-| `commands/` | `/weather-orchestrator`, `/time-command`, `/export-diagram`, `/import-drawio`, `/import-excalidraw`, `/import-mermaid`, `/diagram-design-doctor`, `/diagram-design-profile` |
+| `agents/` | Subagents: `weather-agent`, `time-agent`; plus `code-reviewer`, `security-auditor`, `test-engineer`, `web-performance-auditor` from [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) |
+| `commands/` | `/weather-orchestrator`, `/time-command`, `/export-diagram`, `/import-drawio`, `/import-excalidraw`, `/import-mermaid`, `/diagram-design-doctor`, `/diagram-design-profile`; plus `/spec`, `/plan`, `/build`, `/test`, `/constraints`, `/review`, `/webperf`, `/code-simplify`, `/ship` from agent-skills (see `docs/agent-skills.md`) |
 | `skills/` | `weather-fetcher`, `weather-svg-creator`, `time-skill`, `agent-browser`, `diagram-design` |
 | `rules/` | Path-scoped memory rule (`markdown-docs.md`) |
 | `agent-memory/` | Upstream demo of the auto-memory feature (`weather-agent`) |
