@@ -20,31 +20,28 @@ const DEFAULT_MODELS = {
   imageToVideo: 'wan2.1-image-to-video',
 }
 
-// Known boolean flags never consume the following token as a value, so
-// `--dry-run image` keeps `image` as a positional command instead of losing it.
-const BOOLEAN_FLAGS = ['dry-run', 'no-wait']
+const { parseArgs } = require('node:util')
 
-function parseArgs(argv) {
-  const result = { _: [] }
-  for (let i = 0; i < argv.length; i++) {
-    const arg = argv[i]
-    if (arg.startsWith('--')) {
-      const key = arg.slice(2)
-      const next = argv[i + 1]
-      if (next && !next.startsWith('--') && !BOOLEAN_FLAGS.includes(key)) {
-        result[key] = next
-        i++
-      } else {
-        result[key] = true
-      }
-    } else {
-      result._.push(arg)
-    }
-  }
-  return result
+// Every --flag this CLI reads; node:util.parseArgs needs each one typed
+// up front (strict: false still allows unlisted flags, just without
+// value-capture).
+const STRING_FLAGS = [
+  'aspect-ratio', 'duration', 'id', 'image-url', 'mode', 'model', 'prompt',
+  'quality', 'resolution', 'seed',
+]
+const options = {
+  'dry-run': { type: 'boolean' },
+  'no-wait': { type: 'boolean' },
 }
+for (const flag of STRING_FLAGS) options[flag] = { type: 'string' }
 
-const args = parseArgs(process.argv.slice(2))
+const { values, positionals } = parseArgs({
+  args: process.argv.slice(2),
+  options,
+  strict: false,
+  allowPositionals: true,
+})
+const args = { ...values, _: positionals }
 
 function headers() {
   return { 'Content-Type': 'application/json', 'x-api-key': API_KEY }
