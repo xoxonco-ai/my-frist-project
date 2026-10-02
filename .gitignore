@@ -23,6 +23,7 @@ skills-lock.json
 !.claude/skills/time-skill/
 !.claude/skills/weather-fetcher/
 !.claude/skills/weather-svg-creator/
+!.claude/skills/diagram-design/
 
 # Environment variables / secrets
 .env

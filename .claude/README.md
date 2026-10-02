@@ -19,8 +19,8 @@ This directory is an install of [shanraisshan/claude-code-best-practice](https:/
 | `settings.json` | Permissions, hooks wiring, status line, output style, `plansDirectory`, env |
 | `hooks/` | Cross-platform sound-notification system (`scripts/hooks.py`, 30 hook events, `sounds/`) |
 | `agents/` | Subagents: `weather-agent`, `time-agent`; plus `code-reviewer`, `security-auditor`, `test-engineer`, `web-performance-auditor` from [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) |
-| `commands/` | `/weather-orchestrator`, `/time-command`; plus `/spec`, `/plan`, `/build`, `/test`, `/constraints`, `/review`, `/webperf`, `/code-simplify`, `/ship` from agent-skills (see `docs/agent-skills.md`) |
-| `skills/` | `weather-fetcher`, `weather-svg-creator`, `time-skill`, `agent-browser` |
+| `commands/` | `/weather-orchestrator`, `/time-command`, `/export-diagram`, `/import-drawio`, `/import-excalidraw`, `/import-mermaid`, `/diagram-design-doctor`, `/diagram-design-profile`; plus `/spec`, `/plan`, `/build`, `/test`, `/constraints`, `/review`, `/webperf`, `/code-simplify`, `/ship` from agent-skills (see `docs/agent-skills.md`) |
+| `skills/` | `weather-fetcher`, `weather-svg-creator`, `time-skill`, `agent-browser`, `diagram-design` |
 | `rules/` | Path-scoped memory rule (`markdown-docs.md`) |
 | `agent-memory/` | Upstream demo of the auto-memory feature (`weather-agent`) |
 | `../.mcp.json` | Project MCP servers: `playwright`, `context7`, `deepwiki` (via `npx`) |
@@ -75,6 +75,24 @@ Everything is upstream-verbatim except:
    is not in the spec's recognised field set, so the validator emits an `[unknown-field]`
    warning for it. The workflow runs with `fail-on-warning: false`, and the field is
    functional in Claude Code, so it is left as upstream wrote it.
+
+## Additional skill: `diagram-design`
+
+Unlike everything else in this directory, `skills/diagram-design/` and its six `commands/`
+entries are **not** part of the `claude-code-best-practice` sync above — they're a separate,
+independently installed skill.
+
+| | |
+|---|---|
+| Upstream | [`cathrynlavery/diagram-design`](https://github.com/cathrynlavery/diagram-design) |
+| Version | `2.6` (skill) / `2.6.33` (plugin manifest) |
+| License | MIT (upstream) |
+| Scope | `skills/diagram-design/` verbatim; the plugin's `commands/` copied in, with `doctor.md` / `profile.md` renamed to `diagram-design-doctor.md` / `diagram-design-profile.md` to avoid ambiguous command names |
+
+Creates branded architecture/flowchart/sequence/ER/etc. diagrams as self-contained HTML with
+inline SVG. `/export-diagram` needs Playwright for PNG output (SVG-only export has no extra
+dependency); see `skills/diagram-design/references/doctor.md` for the full readiness checklist,
+runnable via `/diagram-design-doctor`.
 
 ## Review before relying on it
 
