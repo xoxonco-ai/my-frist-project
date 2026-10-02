@@ -151,6 +151,18 @@ See each skill's **Related Skills** section for the full dependency map.
 | [ramana-perspective](skills/ramana-perspective/) | | |
 | [redesign-existing-projects](skills/redesign-existing-projects/) | 【舊網站改版稽核】Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns,... |
 | [referrals](skills/referrals/) | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy.... |
+| [remotion-best-practices](skills/remotion-best-practices/) | Router for all Remotion skills |
+| [remotion-captions](skills/remotion-captions/) | Transcribing, displaying and animating captions |
+| [remotion-create](skills/remotion-create/) | Create a new Remotion video |
+| [remotion-docs](skills/remotion-docs/) | Search Remotion documentation |
+| [remotion-interactivity](skills/remotion-interactivity/) | Structure Remotion markup for interactivity |
+| [remotion-maps](skills/remotion-maps/) | Remotion Map animation knowledge |
+| [remotion-markup](skills/remotion-markup/) | Content, animation and effects best practices |
+| [remotion-multimedia](skills/remotion-multimedia/) | Interacting with Mediabunny |
+| [remotion-render](skills/remotion-render/) | Export a Remotion video |
+| [remotion-saas](skills/remotion-saas/) | Build an app with Remotion |
+| [remotion-studio](skills/remotion-studio/) | Preview a Remotion video |
+| [remotion-upgrade](skills/remotion-upgrade/) | Upgrade Remotion, and related packages |
 | [revops](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes.... |
 | [rogers-perspective](skills/rogers-perspective/) | | |
 | [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also... |
