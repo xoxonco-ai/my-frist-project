@@ -496,6 +496,42 @@
         "source": "github",
         "repo": "JuliusBrussee/caveman"
       }
+    },
+    "tiktok-video-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/tiktok-video-skills"
+      }
+    },
+    "ad-video-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/ad-video-skills"
+      }
+    },
+    "ecommerce-video-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/ecommerce-video-skills"
+      }
+    },
+    "youtube-video-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/youtube-video-skills"
+      }
+    },
+    "explainer-video-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/explainer-video-skills"
+      }
+    },
+    "text-message-video-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/text-message-video-skills"
+      }
     }
   },
   "enabledPlugins": {
@@ -503,6 +539,12 @@
     "baoyu-skills@baoyu-skills": true,
     "hyperframes@hyperframes": true,
     "antv-infographic-skills@antv-infographic": true,
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "tiktok-video-skills@tiktok-video-skills": true,
+    "ad-video-skills@ad-video-skills": true,
+    "ecommerce-video-skills@ecommerce-video-skills": true,
+    "youtube-video-skills@youtube-video-skills": true,
+    "explainer-video-skills@explainer-video-skills": true,
+    "text-message-video-skills@text-message-video-skills": true
   }
 }
