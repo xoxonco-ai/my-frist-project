@@ -210,12 +210,59 @@ Use when user asks about 噶举派 yogic practice or wants teaching in 米拉日
 
 ## 6. 做頁面／做設計有七個在搶
 
-`canvas-design`、`theme-factory`、`brand-guidelines`、`web-artifacts-builder`（帳號同步）＋ `design`、`artifact-design`、`dataviz`（Claude Code 內建）全部落在同一個語意區。
+補寫日期：2026-11-03（本節晚於前五節，盤點當時只給了方向）
 
-內建那三個會自動接手，不需要處理。帳號端建議二選一：
+`canvas-design`、`theme-factory`、`brand-guidelines`、`web-artifacts-builder`、`design`、`artifact-design`、`dataviz` 全部落在同一個語意區。但它們**不是同一類東西**，這決定了能處理到什麼程度：
 
-- 要輸出 **PNG／PDF 靜態稿** → 留 `canvas-design`
-- 要輸出 **HTML／Artifact 網頁** → 留 `web-artifacts-builder`，`theme-factory` 併入它的配色章節
+| skill | 來源 | 能改 description 嗎 |
+|---|---|---|
+| `canvas-design` | 帳號同步 | 能 |
+| `theme-factory` | 帳號同步 | 能 |
+| `brand-guidelines` | 帳號同步 | 能 |
+| `web-artifacts-builder` | 帳號同步 | 能 |
+| `design` | Claude Code 內建 | **不能** |
+| `artifact-design` | Claude Code 內建 | **不能** |
+| `dataviz` | Claude Code 內建 | **不能** |
+
+內建那三個不在 `~/.claude/skills/` 底下，沒有可編輯的檔案，也沒有可貼的欄位。所以去重只能從可編輯的四個這一側做：**由它們明確讓出內建那三個的地盤**，寫進各自的路由句。效果等價，因為撞車是雙向的——只要一邊把界線講清楚，模型就有依據選擇。
+
+> **勘誤**：本節初版建議「二選一：留 `canvas-design` 或 `web-artifacts-builder`，`theme-factory` 併入後者的配色章節」。讀過四個 skill 的本體後這個建議是錯的——`theme-factory` 有獨立職責（對**已存在**的 artifact 套用 10 個預設主題，且流程強制要使用者先選），併進別人的章節會弄丟那個「只改不建」的語意。四個都保留，用 description 分流。
+
+### 真正的分野軸線
+
+- `canvas-design` 先寫一份**設計哲學**（美學立場，本體明確聲明「不是版面也不是模板」），再渲染成 .png／.pdf。靜態、圖像承載意義、文字只是視覺點綴。
+- `design` 做的是**可手改的多畫板 canvas**，使用者之後逐個元素調。與上者的分野是輸出形態與意圖，不是題材——兩者都能做海報。
+- `web-artifacts-builder` 會真的跑 toolchain：`scripts/init-artifact.sh` 建 React 18 + TypeScript + Vite + Tailwind 專案，`scripts/bundle-artifact.sh` 打包成單一 HTML。本體明確排除單檔 HTML／JSX。
+- `theme-factory` 只**改已存在的東西**，給 10 個預設主題讓使用者挑。
+- `brand-guidelines` 是**一家公司的**品牌 token（`#141413`／`#faf9f5`／`#d97757`＋字體），沒有選單，只有一個正確答案。
+- `artifact-design` 不是生產者而是**前置指引**，寫任何 artifact 前載入。它不跟上面任何一個競爭，是它們的前置。
+- `dataviz` 只要涉及圖表就該贏，不分輸出媒介。
+
+### 四個可編輯 skill 的成品 description
+
+#### `canvas-design` 的新 description
+
+```
+Use when the user wants a finished piece of visual art as a static file — a poster, a print piece, a cover-like image, any composition where the image carries the meaning and text is at most a visual accent. Produces a written design philosophy (an aesthetic position, not a layout or a template) and then renders it to .png / .pdf. Differs from /design in both output and intent: /design builds a multi-artboard canvas the user then edits element by element, while this one commits to a single aesthetic and renders it flat. Routing: "a mockup, wireframe, screen flow or landing page I can tweak by hand" goes to /design; "an HTML page or a web app" goes to /web-artifacts-builder; "a chart, graph or dashboard" goes to /dataviz; "restyle something that already exists" goes to /theme-factory. Triggers: poster, print piece, visual art, design philosophy, aesthetic movement, 海報, 美術稿, 視覺作品, 做一張圖, .png output, .pdf output.
+```
+
+#### `theme-factory` 的新 description
+
+```
+Use only to restyle an artifact that ALREADY EXISTS, by applying one of 10 pre-set font-and-colour themes. The flow is fixed: show theme-showcase.pdf, ask which theme, wait for an explicit choice, then apply it — most often to a slide deck. Differs from /brand-guidelines, which carries one organisation's brand tokens instead of a menu of generic themes: if the user wants Anthropic's look, that one wins. Differs from /canvas-design and /web-artifacts-builder, which create artifacts rather than restyle them. Routing: "make me a poster" goes to /canvas-design; "build the page" goes to /web-artifacts-builder; "use our brand colours" goes to /brand-guidelines; "this deck looks plain, give it a theme / change the palette / pick a different font pairing" goes here. Triggers: apply a theme, theme showcase, restyle this deck, font pairing, 換主題, 換配色, 字體搭配, 這份簡報太素.
+```
+
+#### `brand-guidelines` 的新 description
+
+```
+Use when the output must follow ANTHROPIC's specific brand identity — its named colour tokens (dark #141413, light #faf9f5, orange accent #d97757) and its typography. The scope is one organisation's brand, not design in general. Differs from /theme-factory, which offers 10 generic themes to pick from: this skill has no menu, there is one correct answer. Differs from /canvas-design and /web-artifacts-builder, which decide what to build — this only decides how it should look, and layers on top of whichever of them produced the artifact. Routing: "give this deck a nicer theme" goes to /theme-factory; "make me a poster" goes to /canvas-design; "make it look like Anthropic / use our brand colours / match the company style guide" goes here. Triggers: Anthropic brand, brand colours, brand typography, corporate identity, style guide, 品牌色, 品牌規範, 公司視覺識別.
+```
+
+#### `web-artifacts-builder` 的新 description
+
+```
+Use for a claude.ai HTML artifact that is a real multi-component front end — one needing state management, routing, or shadcn/ui components. It scaffolds a React 18 + TypeScript + Vite + Tailwind project with scripts/init-artifact.sh, then bundles everything into a single HTML file with scripts/bundle-artifact.sh. Explicitly NOT for a simple single-file HTML or JSX artifact: that needs no toolchain and should be written directly. Differs from /design, which produces hand-editable artboards rather than running code. Routing: "a mockup or screen flow I can tweak visually" goes to /design; "a poster or a static image" goes to /canvas-design; "a chart or a dashboard" goes to /dataviz; "an app with several views, saved state, or a component library" goes here. Triggers: React artifact, shadcn/ui, multi-component artifact, routing, state management, 多頁面 artifact, 做一個網頁應用, bundle to single HTML.
+```
 
 ---
 
@@ -233,7 +280,7 @@ Use when user asks about 噶举派 yogic practice or wants teaching in 米拉日
 
 要讓修改生效，在 claude.ai 的 skill 編輯介面逐一貼上新的 description，或在原始編寫的專案裡改完重新同步。
 
-### 待貼清單（18 個）
+### 待貼清單（22 個）
 
 | # | skill | 已貼上 |
 |---|---|---|
@@ -255,6 +302,10 @@ Use when user asks about 噶举派 yogic practice or wants teaching in 米拉日
 | 16 | `laozi-perspective` | ☐ |
 | 17 | `zhuangzi-perspective` | ☐ |
 | 18 | `krishnamurti-perspective` | ☐ |
+| 19 | `canvas-design` | ☐ |
+| 20 | `theme-factory` | ☐ |
+| 21 | `brand-guidelines` | ☐ |
+| 22 | `web-artifacts-builder` | ☐ |
 
 貼完後可以自己驗一次：任選一句你常打的話，看它現在只命中一個 skill。例如「我一直拿自己跟別人比」只該叫出 `krishnamurti-perspective`，「腦子停不下來」只該叫出 `tolle-perspective`，「夢裡反覆出現同一個形象」只該叫出 `jung-perspective`。
 
