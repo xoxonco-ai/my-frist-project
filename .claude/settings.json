@@ -538,6 +538,12 @@
         "source": "github",
         "repo": "iart-ai/data-animation-skills"
       }
+    },
+    "web-animation-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/web-animation-skills"
+      }
     }
   },
   "enabledPlugins": {
@@ -552,6 +558,7 @@
     "youtube-video-skills@youtube-video-skills": true,
     "explainer-video-skills@explainer-video-skills": true,
     "text-message-video-skills@text-message-video-skills": true,
-    "data-animation-skills@data-animation-skills": true
+    "data-animation-skills@data-animation-skills": true,
+    "web-animation-skills@web-animation-skills": true
   }
 }
