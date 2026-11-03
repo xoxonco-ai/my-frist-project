@@ -532,6 +532,12 @@
         "source": "github",
         "repo": "iart-ai/text-message-video-skills"
       }
+    },
+    "data-animation-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/data-animation-skills"
+      }
     }
   },
   "enabledPlugins": {
@@ -545,6 +551,7 @@
     "ecommerce-video-skills@ecommerce-video-skills": true,
     "youtube-video-skills@youtube-video-skills": true,
     "explainer-video-skills@explainer-video-skills": true,
-    "text-message-video-skills@text-message-video-skills": true
+    "text-message-video-skills@text-message-video-skills": true,
+    "data-animation-skills@data-animation-skills": true
   }
 }
