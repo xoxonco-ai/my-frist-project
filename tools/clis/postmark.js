@@ -41,41 +41,26 @@ async function api(method, path, body, useAccountToken) {
   }
 }
 
-function parseArgs(args) {
-  const BOOLEAN_FLAGS = new Set(['dry-run'])
-  const result = { _: [] }
-  for (let i = 0; i < args.length; i++) {
-    const arg = args[i]
-    if (arg.startsWith('--')) {
-      const body = arg.slice(2)
-      // Bare "--" is the end-of-options delimiter: the rest are positional.
-      if (body === '') {
-        result._.push(...args.slice(i + 1))
-        break
-      }
-      const eq = body.indexOf('=')
-      if (eq !== -1) {
-        const key = body.slice(0, eq)
-        const val = body.slice(eq + 1)
-        result[key] = BOOLEAN_FLAGS.has(key) ? (val === 'true' || val === '1') : val
-        continue
-      }
-      const key = body
-      const next = args[i + 1]
-      if (!BOOLEAN_FLAGS.has(key) && next !== undefined && !next.startsWith('--')) {
-        result[key] = next
-        i++
-      } else {
-        result[key] = true
-      }
-    } else {
-      result._.push(arg)
-    }
-  }
-  return result
-}
+const { parseArgs } = require('node:util')
 
-const args = parseArgs(process.argv.slice(2))
+// Every --flag this CLI reads; node:util.parseArgs needs each one typed
+// up front (strict: false still allows unlisted flags, just without
+// value-capture).
+const STRING_FLAGS = [
+  'alias', 'bcc', 'cc', 'count', 'email', 'from', 'html', 'id', 'inactive',
+  'model', 'name', 'offset', 'recipient', 'reply-to', 'status', 'stream',
+  'subject', 'tag', 'template', 'text', 'to', 'track-links', 'type'
+]
+const options = { 'dry-run': { type: 'boolean' }, 'track-opens': { type: 'boolean' } }
+for (const flag of STRING_FLAGS) options[flag] = { type: 'string' }
+
+const { values, positionals } = parseArgs({
+  args: process.argv.slice(2),
+  options,
+  strict: false,
+  allowPositionals: true,
+})
+const args = { ...values, _: positionals }
 const [cmd, sub, ...rest] = args._
 
 async function main() {
