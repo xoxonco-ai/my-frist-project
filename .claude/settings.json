@@ -544,6 +544,12 @@
         "source": "github",
         "repo": "iart-ai/web-animation-skills"
       }
+    },
+    "motion-design-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/motion-design-skills"
+      }
     }
   },
   "enabledPlugins": {
@@ -559,6 +565,7 @@
     "explainer-video-skills@explainer-video-skills": true,
     "text-message-video-skills@text-message-video-skills": true,
     "data-animation-skills@data-animation-skills": true,
-    "web-animation-skills@web-animation-skills": true
+    "web-animation-skills@web-animation-skills": true,
+    "motion-design-skills@motion-design-skills": true
   }
 }
