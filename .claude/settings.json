@@ -556,6 +556,12 @@
         "source": "github",
         "repo": "iart-ai/kinetic-typography-skills"
       }
+    },
+    "freelance-motion-skills": {
+      "source": {
+        "source": "github",
+        "repo": "iart-ai/freelance-motion-skills"
+      }
     }
   },
   "enabledPlugins": {
@@ -573,6 +579,7 @@
     "data-animation-skills@data-animation-skills": true,
     "web-animation-skills@web-animation-skills": true,
     "motion-design-skills@motion-design-skills": true,
-    "kinetic-typography-skills@kinetic-typography-skills": true
+    "kinetic-typography-skills@kinetic-typography-skills": true,
+    "freelance-motion-skills@freelance-motion-skills": true
   }
 }
