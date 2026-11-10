@@ -31,6 +31,12 @@ IG_ID = os.getenv("IG_BUSINESS_ACCOUNT_ID", "")
 VERIFY_TOKEN = os.getenv("WEBHOOK_VERIFY_TOKEN", "fusheng-verify")
 APP_SECRET = os.getenv("META_APP_SECRET", "")
 
+if not APP_SECRET:
+    raise SystemExit(
+        "缺少 META_APP_SECRET：沒有它，/webhook 無法驗證請求真的來自 Meta，"
+        "任何人都能偽造事件觸發私訊與名單紀錄。請在 .env 設定後再啟動。"
+    )
+
 app = Flask(__name__)
 
 
@@ -88,8 +94,6 @@ def send_dm(recipient: dict, keyword: str) -> None:
 
 def verify_signature(req) -> bool:
     """驗證 Meta 的 X-Hub-Signature-256，確認事件真的來自 Meta。"""
-    if not APP_SECRET:
-        return True  # 未設 secret 就略過（建議正式環境一定要設）
     sig = req.headers.get("X-Hub-Signature-256", "")
     expected = "sha256=" + hmac.new(
         APP_SECRET.encode(), req.get_data(), hashlib.sha256
