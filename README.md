@@ -184,6 +184,30 @@ See each skill's **Related Skills** section for the full dependency map.
 | [watch](skills/watch/) | Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript... |
 <!-- SKILLS:END -->
 
+## Claude Code-Only Utility Skills
+
+The table above is auto-generated from the `skills/` directory and covers only
+the cross-agent marketing skills (see [Agent Skills Specification](https://agentskills.io/specification.md)).
+This repo also vendors a few Claude Code-specific skills directly into
+`.claude/skills/`, outside that table, because they rely on Claude Code
+features (like `allowed-tools` or subagent-only invocation) that aren't
+portable to other agents:
+
+| Skill | Description |
+|-------|-------------|
+| [ponytail](.claude/skills/ponytail/) | Lazy senior dev mode — smallest change that fully solves the task. |
+| [ponytail-review](.claude/skills/ponytail-review/) | Quality review of a diff: bugs, security, load, missing tests, speed. |
+| [ponytail-audit](.claude/skills/ponytail-audit/) | The same quality review, run across the whole repo, ranked. |
+| [ponytail-debt](.claude/skills/ponytail-debt/) | Harvests `shortcut:` comments into a tracked debt ledger. |
+| [ponytail-gain](.claude/skills/ponytail-gain/) | Measured-impact scoreboard: less code, less cost, more speed. |
+| [ponytail-help](.claude/skills/ponytail-help/) | Quick reference card for the ponytail skills above. |
+| [agent-browser](.claude/skills/agent-browser/) | Browser automation CLI for AI agents (navigate, click, fill forms, scrape, screenshot). |
+| [diagram-design](.claude/skills/diagram-design/) | Create branded architecture, flowchart, sequence, ER, and other diagrams as HTML/SVG/PNG. |
+
+`.claude/skills/` also contains a few demo/sample skills (`time-skill`,
+`weather-fetcher`, `weather-svg-creator`) used to illustrate single- and
+multi-agent orchestration patterns; see their `SKILL.md` files for details.
+
 ## Installation
 
 ### Option 1: CLI Install (Recommended)
