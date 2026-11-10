@@ -562,6 +562,12 @@
         "source": "github",
         "repo": "iart-ai/freelance-motion-skills"
       }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
     }
   },
   "enabledPlugins": {
@@ -580,6 +586,7 @@
     "web-animation-skills@web-animation-skills": true,
     "motion-design-skills@motion-design-skills": true,
     "kinetic-typography-skills@kinetic-typography-skills": true,
-    "freelance-motion-skills@freelance-motion-skills": true
+    "freelance-motion-skills@freelance-motion-skills": true,
+    "ponytail@ponytail": true
   }
 }
