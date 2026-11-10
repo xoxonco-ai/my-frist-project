@@ -24,6 +24,12 @@ skills-lock.json
 !.claude/skills/weather-fetcher/
 !.claude/skills/weather-svg-creator/
 !.claude/skills/diagram-design/
+!.claude/skills/ponytail/
+!.claude/skills/ponytail-review/
+!.claude/skills/ponytail-audit/
+!.claude/skills/ponytail-debt/
+!.claude/skills/ponytail-gain/
+!.claude/skills/ponytail-help/
 
 # Environment variables / secrets
 .env
